@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: #070a0f;
+  color: #e6edf3;
+  font-family: "Inter", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Subtle grid backdrop for command-center feel */
+.bg-grid {
+  background-image:
+    linear-gradient(to right, rgba(62, 233, 181, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(62, 233, 181, 0.04) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+.bg-radial-fade {
+  background: radial-gradient(ellipse 80% 50% at 50% -10%, rgba(62, 233, 181, 0.08), transparent 60%);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0e14;
+}
+::-webkit-scrollbar-thumb {
+  background: #1c2433;
+  border-radius: 6px;
+  border: 2px solid #0a0e14;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #283142;
+}
+
+@layer components {
+  .card {
+    @apply rounded-xl border border-ink-700 bg-ink-850/80 backdrop-blur-sm shadow-card;
+  }
+  .card-hover {
+    @apply transition-all duration-300 hover:border-ink-600 hover:bg-ink-800/80;
+  }
+  .chip {
+    @apply inline-flex items-center gap-1.5 rounded-full border px-2.5 py-1 text-xs font-medium;
+  }
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg bg-accent px-5 py-2.5 text-sm font-semibold text-ink-950 transition-all duration-200 hover:bg-accent-dark hover:shadow-glow-accent active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-50;
+  }
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg border border-ink-600 bg-ink-800/60 px-5 py-2.5 text-sm font-semibold text-slate-200 transition-all duration-200 hover:border-ink-500 hover:bg-ink-750 active:scale-[0.98];
+  }
+  .input-field {
+    @apply w-full rounded-lg border border-ink-600 bg-ink-900/60 px-3.5 py-2.5 text-sm text-slate-100 placeholder-slate-500 transition-colors focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent/40;
+  }
+  .label-text {
+    @apply mb-1.5 block text-xs font-medium uppercase tracking-wider text-slate-400;
+  }
+  .stat-value {
+    @apply font-mono text-2xl font-semibold tabular-nums text-slate-100;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
