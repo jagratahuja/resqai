@@ -1,33 +1,28 @@
 import { useLocation, useNavigate, Link } from "react-router-dom";
+import { useEffect, useState } from "react";
 import {
-  Activity,
-  Ambulance,
-  Flame,
-  HardHat,
-  HeartPulse,
-  Hospital,
-  Clock,
-  Target,
-  TrendingUp,
-  Gauge,
-  Lightbulb,
-  ArrowLeft,
-  RotateCcw,
-  ShieldCheck,
-  AlertTriangle,
+  Activity, HeartPulse, Hospital,
+  Clock, Target, Gauge, Lightbulb, ArrowLeft,
+  RotateCcw, ShieldCheck, AlertTriangle, Network, 
 } from "lucide-react";
-import type { SimulationResult, SimulationInput } from "../types";
+import type { SimulationResult, SimulationInput, MultiIncidentResult, ModelMetrics } from "../types";
+import { getModelMetrics } from "../api/simulationApi";
 import StatCard from "../components/StatCard";
 import SectionCard from "../components/SectionCard";
 import RiskBadge from "../components/RiskBadge";
 import Timeline from "../components/Timeline";
 import ResourceAllocationChart from "../components/charts/ResourceAllocationChart";
 import ImpactBreakdownChart from "../components/charts/ImpactBreakdownChart";
-import ResponseImprovementChart from "../components/charts/ResponseImprovementChart";
+import { OptimizationPanel } from "../components/OptimizationPanel";
+import { ModelMetricsCard } from "../components/ModelMetricsCard";
+import { FeatureImportanceChart } from "../components/FeatureImportanceChart";
+import { IncidentComparisonGrid } from "../components/IncidentComparisonGrid";
 
 interface LocationState {
-  result: SimulationResult;
-  input: SimulationInput;
+  result?: SimulationResult;
+  input?: SimulationInput;
+  multiResult?: MultiIncidentResult;
+  mode: "single" | "multi";
 }
 
 function EmptyState() {
@@ -51,10 +46,17 @@ export default function DashboardPage() {
   const location = useLocation();
   const navigate = useNavigate();
   const state = location.state as LocationState | null;
+  const [metrics, setMetrics] = useState<ModelMetrics | undefined>();
 
-  if (!state?.result) return <EmptyState />;
+  useEffect(() => {
+    if (state) {
+      getModelMetrics().then(setMetrics).catch(console.error);
+    }
+  }, [state]);
 
-  const { result, input } = state;
+  if (!state || (!state.result && !state.multiResult)) return <EmptyState />;
+
+  const { mode, result, input, multiResult } = state;
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
@@ -69,21 +71,23 @@ export default function DashboardPage() {
               <ArrowLeft className="h-4 w-4" />
             </button>
             <span className="chip border-ink-600 bg-ink-800 text-slate-400">
-              <Activity className="h-3.5 w-3.5 text-accent" />
-              Incident {result.incidentId}
+              {mode === "single" ? (
+                <><Activity className="h-3.5 w-3.5 text-accent" /> Incident {result?.incidentId}</>
+              ) : (
+                <><Network className="h-3.5 w-3.5 text-accent" /> Global AI Dispatch</>
+              )}
             </span>
-            <RiskBadge level={result.riskLevel} size="sm" />
+            {mode === "single" && <RiskBadge level={result!.riskLevel} size="sm" />}
           </div>
           <h1 className="mt-3 text-2xl font-bold tracking-tight text-slate-100 sm:text-3xl">
-            Response Dashboard
+            {mode === "single" ? "Response Dashboard" : "Multi-Incident Optimization"}
           </h1>
-          <p className="mt-1 text-sm text-slate-400">
-            {input.incidentType} · {input.location} · Generated{" "}
-            {new Date(result.generatedAt).toLocaleTimeString("en-US", {
-              hour: "2-digit",
-              minute: "2-digit",
-              hour12: false,
-            })}
+          <p className="mt-1 text-sm text-slate-400 flex items-center gap-2">
+            {mode === "single" ? (
+              <>{input?.incidentType} · {input?.location} · Generated {new Date(result!.generatedAt).toLocaleTimeString()}</>
+            ) : (
+              <>{multiResult?.incidents.length} Simultaneous Incidents · System-wide resource routing</>
+            )}
           </p>
         </div>
         <div className="flex items-center gap-2">
@@ -94,161 +98,114 @@ export default function DashboardPage() {
         </div>
       </div>
 
-      {/* Top stat row */}
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-        <StatCard
-          label="Emergency Impact Score"
-          value={result.impactScore}
-          unit="/ 100"
-          icon={Gauge}
-          accent={result.impactScore >= 65 ? "red" : result.impactScore >= 45 ? "amber" : "accent"}
-          sublabel={`Confidence ${result.confidenceScore}%`}
-        />
-        <StatCard
-          label="Estimated Injured"
-          value={result.estimatedInjured}
-          icon={HeartPulse}
-          accent="red"
-          sublabel={`${result.estimatedFatalities} projected fatalities`}
-        />
-        <StatCard
-          label="Hospital Capacity Used"
-          value={result.hospitalCapacityUsed}
-          unit="%"
-          icon={Hospital}
-          accent="blue"
-          sublabel="Across 3 trauma centers"
-        />
-        <StatCard
-          label="Containment Time"
-          value={result.estimatedContainmentTime}
-          icon={Clock}
-          accent="violet"
-          sublabel="Estimated to full containment"
-        />
-      </div>
+      {mode === "multi" && multiResult ? (
+        <div className="space-y-6">
+          <div className="grid gap-6 lg:grid-cols-3">
+            <OptimizationPanel result={multiResult.optimization} />
+            <ModelMetricsCard metrics={metrics} />
+            <FeatureImportanceChart metrics={metrics} />
+          </div>
+          
+          <SectionCard title="Active Emergencies" subtitle="Simultaneous incidents prioritized by AI" icon={Activity}>
+             <IncidentComparisonGrid incidents={multiResult.incidents.map((inc: any) => ({
+                 incidentId: inc.id,
+                 incidentType: inc.incident_type,
+                 location: inc.location,
+                 impactScore: inc.impact,
+                 riskLevel: inc.impact >= 82 ? 'Critical' : inc.impact >= 65 ? 'Severe' : 'Moderate',
+                 occupancy: inc.occupancy,
+                 estimatedInjured: inc.estimated_injured
+             }))} />
+          </SectionCard>
+        </div>
+      ) : result && input ? (
+        <>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            <StatCard
+              label="Emergency Impact Score"
+              value={result.impactScore}
+              unit="/ 100"
+              icon={Gauge}
+              accent={result.impactScore >= 65 ? "red" : result.impactScore >= 45 ? "amber" : "accent"}
+              sublabel="Real-time ML prediction"
+            />
+            <StatCard
+              label="Estimated Injured"
+              value={result.estimatedInjured}
+              icon={HeartPulse}
+              accent="red"
+              sublabel={`${result.estimatedFatalities} projected fatalities`}
+            />
+            <StatCard
+              label="Hospital Capacity Used"
+              value={result.hospitalCapacityUsed}
+              unit="%"
+              icon={Hospital}
+              accent="blue"
+              sublabel="Across 3 trauma centers"
+            />
+            <StatCard
+              label="Containment Time"
+              value={result.estimatedContainmentTime}
+              icon={Clock}
+              accent="violet"
+              sublabel="Estimated to full containment"
+            />
+          </div>
 
-      {/* Resource requirements */}
-      <div className="mt-4 grid gap-4 sm:grid-cols-3">
-        <StatCard
-          label="Ambulances Required"
-          value={result.ambulancesRequired}
-          icon={Ambulance}
-          accent="blue"
-          sublabel="EMS dispatch units"
-        />
-        <StatCard
-          label="Fire Engines Required"
-          value={result.fireEnginesRequired}
-          icon={Flame}
-          accent="red"
-          sublabel="Suppression & rescue"
-        />
-        <StatCard
-          label="Rescue Teams Required"
-          value={result.rescueTeamsRequired}
-          icon={HardHat}
-          accent="accent"
-          sublabel="Specialized response"
-        />
-      </div>
+          <div className="mt-4 grid gap-4 lg:grid-cols-3">
+             <OptimizationPanel result={result.optimizationResult} />
+             <div className="lg:col-span-2">
+               <SectionCard
+                 title="Resource Allocation"
+                 subtitle="AI-Optimized dispatch vs. required resources"
+                 icon={Target}
+                 className="h-full"
+               >
+                 <ResourceAllocationChart data={result.resourceAllocation} />
+               </SectionCard>
+             </div>
+          </div>
 
-      {/* Charts row */}
-      <div className="mt-4 grid gap-4 lg:grid-cols-3">
-        <SectionCard
-          title="Resource Allocation"
-          subtitle="Required vs. available dispatch units"
-          icon={Target}
-          className="lg:col-span-2"
-        >
-          <ResourceAllocationChart data={result.resourceAllocation} />
-        </SectionCard>
-        <SectionCard
-          title="Impact Breakdown"
-          subtitle="Distribution by impact category"
-          icon={Gauge}
-        >
-          <ImpactBreakdownChart data={result.impactBreakdown} />
-        </SectionCard>
-      </div>
-
-      <div className="mt-4 grid gap-4 lg:grid-cols-3">
-        <SectionCard
-          title="Response Improvement"
-          subtitle="Traditional vs. ResQAI optimized response time"
-          icon={TrendingUp}
-          className="lg:col-span-2"
-        >
-          <ResponseImprovementChart data={result.responseImprovement} />
-        </SectionCard>
-
-        <SectionCard title="AI Recommendations" subtitle="Actionable response directives" icon={Lightbulb}>
-          <ul className="space-y-2.5">
-            {result.recommendations.map((rec, i) => (
-              <li key={i} className="flex items-start gap-2.5 text-sm text-slate-300">
-                <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-accent/10 text-[10px] font-bold text-accent ring-1 ring-accent/20">
-                  {i + 1}
-                </span>
-                <span className="leading-relaxed">{rec}</span>
-              </li>
-            ))}
-          </ul>
-        </SectionCard>
-      </div>
-
-      {/* Timeline */}
-      <div className="mt-4">
-        <SectionCard
-          title="Simulation Timeline"
-          subtitle="Real-time response pipeline execution"
-          icon={ShieldCheck}
-        >
-          <div className="grid gap-6 lg:grid-cols-2">
-            <Timeline events={result.timeline} />
-            <div className="rounded-lg border border-ink-700 bg-ink-900/40 p-4">
-              <h4 className="mb-3 text-xs font-semibold uppercase tracking-wider text-slate-400">
-                Pipeline Status
-              </h4>
-              <div className="space-y-3">
-                {result.timeline.map((evt) => {
-                  const pct =
-                    evt.status === "completed" ? 100 : evt.status === "active" ? 60 : 0;
-                  return (
-                    <div key={evt.id}>
-                      <div className="mb-1 flex items-center justify-between text-xs">
-                        <span className="text-slate-300">{evt.title}</span>
-                        <span
-                          className={
-                            evt.status === "completed"
-                              ? "text-accent"
-                              : evt.status === "active"
-                              ? "text-signal-amber"
-                              : "text-slate-600"
-                          }
-                        >
-                          {evt.status}
-                        </span>
-                      </div>
-                      <div className="h-1.5 overflow-hidden rounded-full bg-ink-700">
-                        <div
-                          className={`h-full rounded-full transition-all duration-700 ${
-                            evt.status === "completed"
-                              ? "bg-accent"
-                              : evt.status === "active"
-                              ? "bg-signal-amber animate-pulse"
-                              : "bg-ink-600"
-                          }`}
-                          style={{ width: `${pct}%` }}
-                        />
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
+          <div className="mt-4 grid gap-4 lg:grid-cols-3">
+            <div className="lg:col-span-3">
+              <SectionCard
+                title="Factors Influencing Prediction"
+                subtitle="Incident-specific feature contribution"
+                icon={Gauge}
+              >
+                <ImpactBreakdownChart data={result.impactBreakdown} />
+              </SectionCard>
             </div>
           </div>
-        </SectionCard>
-      </div>
+
+          <div className="mt-4 grid gap-4 lg:grid-cols-3">
+            <SectionCard title="AI Recommendations" subtitle="Actionable response directives" icon={Lightbulb}>
+              <ul className="space-y-2.5">
+                {result.recommendations.map((rec, i) => (
+                  <li key={i} className="flex items-start gap-2.5 text-sm text-slate-300">
+                    <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-accent/10 text-[10px] font-bold text-accent ring-1 ring-accent/20">
+                      {i + 1}
+                    </span>
+                    <span className="leading-relaxed">{rec}</span>
+                  </li>
+                ))}
+              </ul>
+            </SectionCard>
+
+            <div className="lg:col-span-2">
+              <SectionCard
+                title="Simulation Timeline"
+                subtitle="Real-time response pipeline execution"
+                icon={ShieldCheck}
+                className="h-full"
+              >
+                <Timeline events={result.timeline} />
+              </SectionCard>
+            </div>
+          </div>
+        </>
+      ) : null}
     </div>
   );
 }

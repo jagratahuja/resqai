@@ -1,0 +1,1001 @@
+incident_id,incident_type,occupancy,weather,time_of_day,response_eta,severity_indicator,temperature,impact_score,estimated_injured
+INC-1000,Fire,107,Clear,Evening,21,7,10,35.87,4
+INC-1001,Building Collapse,137,Rain,Afternoon,20,7,13,40.44,12
+INC-1002,Fire,262,Fog,Morning,21,7,10,63.48,16
+INC-1003,Chemical Leak,354,Snow,Morning,31,6,33,88.34,63
+INC-1004,Fire,135,Clear,Afternoon,24,8,10,41.12,16
+INC-1005,Building Collapse,63,Fog,Morning,32,8,-9,50.26,7
+INC-1006,Chemical Leak,376,Rain,Night,23,9,36,90.08,46
+INC-1007,Building Collapse,437,Snow,Evening,30,8,31,51.52,48
+INC-1008,Fire,195,Rain,Night,22,5,-1,39.37,21
+INC-1009,Flood,4651,Storm,Afternoon,56,8,10,100.0,826
+INC-1010,Building Collapse,387,Storm,Morning,52,9,15,100.0,60
+INC-1011,Fire,161,Snow,Morning,28,8,-4,58.35,17
+INC-1012,Flood,2127,Storm,Evening,43,7,-3,100.0,244
+INC-1013,Fire,235,Snow,Morning,34,5,-2,53.93,28
+INC-1014,Road Accident,34,Clear,Evening,21,3,12,32.14,2
+INC-1015,Chemical Leak,223,Storm,Afternoon,27,8,24,100.0,27
+INC-1016,Fire,135,Clear,Afternoon,13,4,3,58.11,14
+INC-1017,Flood,1584,Clear,Afternoon,6,7,21,65.8,249
+INC-1018,Fire,235,Snow,Evening,37,8,2,57.26,17
+INC-1019,Road Accident,2,Storm,Afternoon,45,4,-5,46.79,0
+INC-1020,Flood,3727,Storm,Afternoon,44,8,17,100.0,575
+INC-1021,Flood,1406,Clear,Afternoon,27,5,-8,71.44,101
+INC-1022,Chemical Leak,465,Rain,Afternoon,22,8,22,88.86,119
+INC-1023,Road Accident,32,Snow,Evening,39,3,38,25.94,1
+INC-1024,Chemical Leak,277,Rain,Evening,17,7,-8,55.25,16
+INC-1025,Fire,117,Rain,Morning,16,5,12,22.92,4
+INC-1026,Flood,3574,Snow,Evening,49,6,21,100.0,415
+INC-1027,Fire,188,Rain,Evening,31,6,13,56.29,20
+INC-1028,Building Collapse,659,Snow,Night,41,8,-2,78.53,55
+INC-1029,Road Accident,20,Rain,Evening,15,6,15,27.94,1
+INC-1030,Building Collapse,196,Rain,Evening,19,10,30,47.02,26
+INC-1031,Chemical Leak,138,Snow,Night,52,8,39,96.97,38
+INC-1032,Flood,4161,Rain,Afternoon,18,6,5,96.27,824
+INC-1033,Chemical Leak,11,Snow,Morning,39,6,26,78.4,2
+INC-1034,Fire,13,Clear,Afternoon,5,4,37,19.14,0
+INC-1035,Building Collapse,722,Snow,Morning,39,10,-3,98.72,183
+INC-1036,Road Accident,40,Snow,Night,30,6,24,41.77,3
+INC-1037,Chemical Leak,454,Storm,Morning,28,6,-7,82.61,55
+INC-1038,Fire,281,Fog,Evening,45,7,-4,47.83,28
+INC-1039,Flood,1054,Clear,Evening,27,7,11,93.05,145
+INC-1040,Road Accident,38,Rain,Night,24,8,-3,57.23,4
+INC-1041,Fire,288,Storm,Afternoon,31,4,-7,60.35,18
+INC-1042,Chemical Leak,58,Clear,Evening,20,9,-5,63.17,10
+INC-1043,Chemical Leak,108,Fog,Afternoon,18,9,10,78.64,11
+INC-1044,Building Collapse,210,Storm,Afternoon,28,10,14,86.6,52
+INC-1045,Chemical Leak,183,Fog,Morning,37,9,12,76.47,17
+INC-1046,Chemical Leak,164,Storm,Night,35,7,6,89.08,23
+INC-1047,Fire,30,Clear,Evening,25,6,13,51.02,4
+INC-1048,Flood,3050,Rain,Morning,16,5,-10,87.68,294
+INC-1049,Building Collapse,932,Fog,Morning,30,9,-9,88.09,154
+INC-1050,Fire,55,Snow,Morning,50,4,11,45.86,4
+INC-1051,Chemical Leak,273,Rain,Afternoon,25,6,28,45.72,14
+INC-1052,Road Accident,45,Fog,Afternoon,31,6,29,21.43,2
+INC-1053,Flood,930,Fog,Night,46,7,26,94.1,119
+INC-1054,Building Collapse,879,Fog,Afternoon,27,9,-10,89.03,117
+INC-1055,Flood,659,Snow,Evening,31,5,-10,69.92,134
+INC-1056,Road Accident,39,Fog,Night,42,7,-8,41.86,4
+INC-1057,Fire,189,Rain,Afternoon,27,8,36,37.87,7
+INC-1058,Fire,242,Storm,Morning,48,9,1,73.77,34
+INC-1059,Chemical Leak,366,Fog,Afternoon,29,8,-6,89.61,90
+INC-1060,Chemical Leak,189,Rain,Morning,28,8,8,82.63,36
+INC-1061,Fire,8,Clear,Afternoon,19,5,13,26.68,0
+INC-1062,Fire,167,Clear,Evening,5,7,32,33.16,16
+INC-1063,Fire,47,Fog,Afternoon,28,7,39,50.63,5
+INC-1064,Flood,2996,Snow,Afternoon,36,6,-1,82.78,593
+INC-1065,Chemical Leak,84,Rain,Night,36,6,14,58.97,12
+INC-1066,Building Collapse,810,Snow,Night,33,10,-2,100.0,199
+INC-1067,Building Collapse,597,Clear,Morning,22,8,21,89.12,89
+INC-1068,Road Accident,32,Storm,Night,36,7,2,52.33,2
+INC-1069,Road Accident,49,Snow,Morning,47,8,11,65.04,5
+INC-1070,Fire,23,Clear,Night,11,4,8,17.65,1
+INC-1071,Flood,3677,Clear,Afternoon,6,9,1,76.87,468
+INC-1072,Building Collapse,940,Rain,Night,17,7,12,92.44,248
+INC-1073,Building Collapse,235,Snow,Afternoon,42,9,-6,67.54,39
+INC-1074,Flood,832,Snow,Afternoon,31,7,36,90.42,168
+INC-1075,Fire,257,Snow,Morning,33,9,31,57.07,26
+INC-1076,Fire,287,Fog,Morning,20,5,18,26.8,20
+INC-1077,Fire,221,Rain,Afternoon,16,8,-5,33.89,18
+INC-1078,Road Accident,19,Snow,Night,36,7,28,57.15,1
+INC-1079,Building Collapse,500,Snow,Morning,33,7,17,60.4,64
+INC-1080,Building Collapse,709,Snow,Morning,35,10,28,100.0,207
+INC-1081,Road Accident,49,Storm,Night,48,3,27,64.8,5
+INC-1082,Flood,2205,Snow,Night,36,8,5,99.24,251
+INC-1083,Building Collapse,276,Rain,Evening,37,9,7,60.74,22
+INC-1084,Building Collapse,354,Clear,Morning,14,8,-8,46.18,36
+INC-1085,Flood,1245,Clear,Morning,12,8,-3,90.76,192
+INC-1086,Chemical Leak,187,Snow,Afternoon,32,9,25,61.15,30
+INC-1087,Fire,224,Fog,Morning,29,8,-5,58.01,37
+INC-1088,Building Collapse,305,Clear,Morning,22,7,-9,32.17,17
+INC-1089,Building Collapse,423,Snow,Morning,37,7,0,62.92,58
+INC-1090,Chemical Leak,72,Rain,Morning,31,6,2,62.68,9
+INC-1091,Chemical Leak,142,Clear,Night,6,7,12,49.42,17
+INC-1092,Chemical Leak,174,Fog,Evening,26,7,6,60.49,15
+INC-1093,Flood,4880,Rain,Evening,13,9,38,97.84,1200
+INC-1094,Building Collapse,83,Storm,Night,38,10,15,40.37,8
+INC-1095,Building Collapse,355,Storm,Night,30,10,33,92.97,70
+INC-1096,Flood,4958,Clear,Morning,22,5,4,78.27,1012
+INC-1097,Road Accident,39,Fog,Morning,21,8,39,58.3,4
+INC-1098,Fire,290,Fog,Afternoon,34,6,27,58.69,27
+INC-1099,Chemical Leak,115,Storm,Afternoon,45,8,18,89.41,13
+INC-1100,Flood,3572,Clear,Afternoon,19,6,13,76.61,463
+INC-1101,Flood,3918,Storm,Afternoon,42,7,36,100.0,492
+INC-1102,Road Accident,16,Fog,Evening,43,5,-7,35.67,1
+INC-1103,Chemical Leak,204,Fog,Morning,41,8,8,67.19,36
+INC-1104,Chemical Leak,475,Storm,Morning,39,9,10,100.0,81
+INC-1105,Building Collapse,95,Storm,Morning,50,8,34,95.33,14
+INC-1106,Fire,286,Fog,Afternoon,37,4,11,51.43,36
+INC-1107,Flood,1376,Storm,Afternoon,46,8,11,100.0,202
+INC-1108,Flood,4223,Rain,Evening,31,6,3,100.0,1055
+INC-1109,Chemical Leak,283,Snow,Evening,27,7,4,78.2,26
+INC-1110,Fire,123,Clear,Night,15,8,6,34.22,5
+INC-1111,Flood,3696,Clear,Morning,27,8,-1,75.18,716
+INC-1112,Flood,2256,Rain,Evening,27,6,36,100.0,490
+INC-1113,Building Collapse,797,Snow,Night,37,9,26,100.0,137
+INC-1114,Chemical Leak,291,Clear,Morning,8,9,34,72.36,21
+INC-1115,Fire,281,Rain,Morning,21,9,37,53.49,19
+INC-1116,Flood,3617,Fog,Afternoon,39,5,20,86.7,383
+INC-1117,Road Accident,2,Rain,Morning,23,6,4,35.22,0
+INC-1118,Flood,3028,Storm,Morning,50,7,4,100.0,810
+INC-1119,Flood,1241,Rain,Afternoon,31,8,22,100.0,306
+INC-1120,Fire,144,Storm,Night,43,4,26,62.3,14
+INC-1121,Chemical Leak,268,Rain,Afternoon,16,6,-1,61.48,34
+INC-1122,Building Collapse,699,Rain,Night,18,10,-9,100.0,180
+INC-1123,Fire,99,Rain,Evening,15,4,3,21.93,6
+INC-1124,Road Accident,11,Rain,Evening,13,3,24,22.5,0
+INC-1125,Building Collapse,398,Clear,Night,18,10,26,61.47,34
+INC-1126,Fire,290,Snow,Afternoon,44,6,-6,61.9,50
+INC-1127,Building Collapse,650,Snow,Evening,37,7,7,69.92,119
+INC-1128,Flood,1418,Rain,Afternoon,15,7,12,100.0,242
+INC-1129,Fire,108,Rain,Night,18,6,-5,21.44,6
+INC-1130,Flood,1302,Storm,Morning,44,6,19,100.0,169
+INC-1131,Flood,1220,Storm,Night,35,9,22,100.0,130
+INC-1132,Chemical Leak,95,Storm,Morning,38,7,-1,93.89,10
+INC-1133,Fire,232,Storm,Afternoon,51,8,4,70.86,42
+INC-1134,Chemical Leak,270,Storm,Morning,42,6,1,99.4,65
+INC-1135,Fire,287,Fog,Night,43,8,29,80.94,50
+INC-1136,Flood,4907,Storm,Night,47,6,2,100.0,1072
+INC-1137,Chemical Leak,365,Fog,Morning,22,9,26,70.92,62
+INC-1138,Road Accident,42,Fog,Afternoon,28,3,18,22.32,1
+INC-1139,Flood,3130,Clear,Night,5,5,29,61.71,428
+INC-1140,Fire,141,Fog,Afternoon,42,5,15,34.11,9
+INC-1141,Flood,2222,Snow,Morning,27,6,16,69.45,381
+INC-1142,Flood,3700,Fog,Evening,28,7,13,76.39,301
+INC-1143,Fire,165,Storm,Evening,40,4,15,57.06,9
+INC-1144,Road Accident,21,Storm,Night,31,3,9,65.73,3
+INC-1145,Flood,1824,Fog,Afternoon,21,5,21,61.71,127
+INC-1146,Building Collapse,264,Snow,Night,45,9,21,89.48,41
+INC-1147,Building Collapse,193,Fog,Evening,34,10,-10,57.39,28
+INC-1148,Road Accident,47,Fog,Morning,21,4,17,24.77,2
+INC-1149,Flood,3435,Storm,Afternoon,53,9,-8,97.98,587
+INC-1150,Road Accident,10,Fog,Evening,29,5,22,45.32,0
+INC-1151,Road Accident,3,Snow,Night,32,5,36,51.47,0
+INC-1152,Building Collapse,100,Fog,Night,36,7,23,61.5,17
+INC-1153,Building Collapse,549,Clear,Evening,25,7,3,72.01,62
+INC-1154,Chemical Leak,441,Fog,Evening,30,7,-4,84.12,46
+INC-1155,Fire,40,Rain,Evening,28,8,-10,51.2,5
+INC-1156,Building Collapse,965,Rain,Afternoon,20,9,-8,90.05,195
+INC-1157,Fire,260,Clear,Afternoon,9,9,33,52.86,19
+INC-1158,Road Accident,22,Fog,Morning,38,6,-1,46.17,1
+INC-1159,Road Accident,32,Snow,Afternoon,39,3,6,34.35,1
+INC-1160,Road Accident,40,Snow,Night,40,4,28,44.71,3
+INC-1161,Building Collapse,715,Rain,Morning,23,8,12,83.11,140
+INC-1162,Fire,150,Snow,Afternoon,32,8,30,59.25,20
+INC-1163,Building Collapse,427,Fog,Night,41,10,31,55.45,30
+INC-1164,Fire,31,Fog,Afternoon,27,4,23,48.58,2
+INC-1165,Fire,177,Snow,Afternoon,49,4,35,55.79,10
+INC-1166,Road Accident,43,Fog,Evening,37,3,25,29.37,3
+INC-1167,Road Accident,39,Fog,Night,37,5,36,51.58,5
+INC-1168,Chemical Leak,415,Snow,Afternoon,43,6,25,66.46,74
+INC-1169,Road Accident,17,Snow,Evening,33,8,-2,52.96,2
+INC-1170,Building Collapse,550,Storm,Night,40,7,6,100.0,120
+INC-1171,Building Collapse,74,Storm,Night,29,9,39,60.84,11
+INC-1172,Fire,176,Storm,Afternoon,31,6,1,52.34,26
+INC-1173,Flood,3104,Storm,Evening,42,5,38,100.0,425
+INC-1174,Chemical Leak,327,Clear,Afternoon,25,9,-3,86.99,69
+INC-1175,Building Collapse,759,Rain,Night,35,10,14,100.0,174
+INC-1176,Building Collapse,620,Rain,Morning,27,8,36,94.63,175
+INC-1177,Road Accident,26,Snow,Evening,50,7,-4,48.1,1
+INC-1178,Chemical Leak,126,Snow,Night,30,8,37,71.82,23
+INC-1179,Fire,227,Rain,Night,35,9,24,48.84,18
+INC-1180,Road Accident,42,Fog,Morning,35,3,24,22.37,2
+INC-1181,Chemical Leak,180,Snow,Night,48,9,33,100.0,38
+INC-1182,Fire,8,Storm,Evening,54,8,2,78.92,1
+INC-1183,Road Accident,2,Snow,Afternoon,30,5,19,40.89,0
+INC-1184,Road Accident,13,Rain,Evening,29,7,28,68.03,1
+INC-1185,Road Accident,10,Snow,Morning,50,8,9,50.46,1
+INC-1186,Road Accident,30,Storm,Night,34,3,19,48.78,3
+INC-1187,Building Collapse,481,Snow,Afternoon,48,7,4,73.87,62
+INC-1188,Chemical Leak,353,Fog,Morning,35,9,26,94.1,95
+INC-1189,Road Accident,11,Fog,Morning,28,8,14,45.52,1
+INC-1190,Fire,264,Snow,Afternoon,30,6,18,61.59,32
+INC-1191,Road Accident,10,Rain,Morning,19,5,15,46.84,0
+INC-1192,Flood,2653,Snow,Evening,48,7,-6,100.0,634
+INC-1193,Building Collapse,265,Snow,Evening,27,9,2,55.24,21
+INC-1194,Flood,2130,Snow,Evening,31,5,3,82.0,311
+INC-1195,Road Accident,28,Storm,Morning,35,7,14,71.76,5
+INC-1196,Road Accident,42,Clear,Morning,21,3,14,11.75,0
+INC-1197,Flood,1074,Rain,Morning,23,7,7,100.0,124
+INC-1198,Fire,180,Clear,Afternoon,5,8,39,10.0,3
+INC-1199,Building Collapse,747,Clear,Afternoon,30,9,23,74.71,116
+INC-1200,Building Collapse,798,Rain,Night,22,7,8,89.49,93
+INC-1201,Fire,173,Fog,Afternoon,33,8,31,59.66,12
+INC-1202,Road Accident,27,Storm,Evening,35,8,32,64.06,4
+INC-1203,Building Collapse,475,Fog,Morning,29,8,19,67.48,90
+INC-1204,Building Collapse,131,Storm,Morning,32,10,-9,82.77,32
+INC-1205,Chemical Leak,26,Clear,Evening,8,9,34,44.55,2
+INC-1206,Chemical Leak,335,Snow,Night,35,8,30,80.76,61
+INC-1207,Building Collapse,271,Clear,Afternoon,24,7,9,46.92,30
+INC-1208,Fire,246,Storm,Morning,46,7,6,52.61,29
+INC-1209,Chemical Leak,219,Clear,Evening,16,7,24,69.55,33
+INC-1210,Chemical Leak,469,Snow,Evening,30,8,-5,95.44,67
+INC-1211,Fire,30,Fog,Evening,29,5,18,32.0,2
+INC-1212,Fire,103,Snow,Night,34,8,4,60.91,9
+INC-1213,Fire,134,Snow,Evening,44,9,0,72.56,15
+INC-1214,Road Accident,17,Rain,Night,28,8,17,50.15,2
+INC-1215,Building Collapse,133,Fog,Evening,41,8,-6,58.09,22
+INC-1216,Chemical Leak,266,Fog,Night,21,7,24,69.72,32
+INC-1217,Road Accident,15,Snow,Evening,42,6,35,44.16,0
+INC-1218,Flood,3776,Rain,Morning,18,9,-4,96.56,388
+INC-1219,Flood,3999,Snow,Afternoon,25,6,35,88.57,681
+INC-1220,Road Accident,30,Fog,Night,21,8,33,49.56,2
+INC-1221,Flood,216,Clear,Night,30,6,0,24.68,15
+INC-1222,Flood,2868,Rain,Night,28,9,35,100.0,833
+INC-1223,Building Collapse,474,Storm,Evening,40,10,13,100.0,61
+INC-1224,Flood,3036,Storm,Evening,44,8,-1,100.0,839
+INC-1225,Chemical Leak,423,Clear,Afternoon,15,6,15,53.89,40
+INC-1226,Fire,198,Rain,Night,25,9,35,63.47,13
+INC-1227,Road Accident,44,Fog,Afternoon,24,3,-5,32.85,3
+INC-1228,Road Accident,9,Snow,Night,44,3,-3,43.89,0
+INC-1229,Fire,255,Clear,Evening,22,6,-5,45.34,30
+INC-1230,Building Collapse,459,Snow,Afternoon,30,9,31,84.63,84
+INC-1231,Flood,3695,Fog,Evening,41,9,8,96.06,1047
+INC-1232,Road Accident,36,Fog,Evening,28,7,21,74.06,6
+INC-1233,Road Accident,22,Fog,Evening,46,7,-8,49.03,1
+INC-1234,Flood,854,Snow,Evening,41,7,-4,100.0,209
+INC-1235,Flood,1056,Storm,Afternoon,32,8,17,100.0,183
+INC-1236,Fire,24,Rain,Evening,34,7,38,69.99,1
+INC-1237,Fire,232,Fog,Afternoon,30,5,25,47.08,20
+INC-1238,Building Collapse,987,Rain,Night,37,9,1,100.0,263
+INC-1239,Flood,3014,Fog,Evening,25,6,37,60.49,401
+INC-1240,Fire,18,Rain,Evening,17,9,26,45.95,1
+INC-1241,Building Collapse,877,Storm,Afternoon,46,7,28,100.0,150
+INC-1242,Flood,229,Clear,Afternoon,32,5,17,45.61,17
+INC-1243,Flood,4655,Clear,Morning,18,8,36,70.54,482
+INC-1244,Chemical Leak,19,Storm,Afternoon,55,8,18,100.0,3
+INC-1245,Road Accident,20,Clear,Morning,11,5,9,19.33,0
+INC-1246,Chemical Leak,116,Storm,Night,43,6,1,93.96,28
+INC-1247,Road Accident,28,Snow,Evening,34,8,39,51.28,4
+INC-1248,Building Collapse,560,Clear,Evening,28,7,18,56.76,43
+INC-1249,Road Accident,5,Clear,Morning,18,3,3,24.44,0
+INC-1250,Road Accident,20,Snow,Morning,44,7,32,51.94,1
+INC-1251,Chemical Leak,436,Clear,Afternoon,27,7,9,74.08,40
+INC-1252,Building Collapse,687,Fog,Evening,35,7,31,73.95,69
+INC-1253,Fire,268,Rain,Morning,19,8,36,55.43,20
+INC-1254,Chemical Leak,299,Snow,Afternoon,48,6,15,75.94,33
+INC-1255,Chemical Leak,35,Snow,Night,41,9,38,78.45,2
+INC-1256,Road Accident,8,Storm,Night,41,3,22,52.09,1
+INC-1257,Flood,1427,Fog,Morning,32,9,17,99.08,186
+INC-1258,Chemical Leak,201,Clear,Afternoon,8,7,30,54.08,13
+INC-1259,Building Collapse,659,Storm,Morning,33,7,27,100.0,123
+INC-1260,Building Collapse,531,Rain,Afternoon,30,8,12,100.0,65
+INC-1261,Chemical Leak,319,Clear,Afternoon,28,8,4,68.29,49
+INC-1262,Fire,203,Snow,Night,46,8,22,55.03,16
+INC-1263,Chemical Leak,483,Snow,Evening,29,8,35,70.93,78
+INC-1264,Fire,269,Rain,Evening,39,6,-3,24.08,6
+INC-1265,Flood,1277,Snow,Morning,35,5,23,100.0,262
+INC-1266,Building Collapse,349,Storm,Afternoon,45,10,-5,100.0,71
+INC-1267,Road Accident,21,Clear,Afternoon,26,5,4,39.09,1
+INC-1268,Building Collapse,764,Storm,Afternoon,42,9,10,100.0,101
+INC-1269,Fire,56,Clear,Afternoon,16,9,-3,42.06,3
+INC-1270,Flood,1781,Fog,Evening,34,6,15,84.99,357
+INC-1271,Road Accident,10,Clear,Night,13,7,38,31.04,0
+INC-1272,Flood,135,Snow,Evening,28,8,-4,48.77,13
+INC-1273,Chemical Leak,56,Fog,Night,33,8,11,82.2,12
+INC-1274,Road Accident,22,Clear,Morning,17,6,-2,19.73,0
+INC-1275,Road Accident,42,Storm,Evening,32,3,39,48.7,5
+INC-1276,Fire,104,Clear,Afternoon,15,7,14,38.51,7
+INC-1277,Chemical Leak,251,Fog,Morning,29,6,24,59.38,40
+INC-1278,Flood,4868,Fog,Morning,36,9,37,88.37,607
+INC-1279,Building Collapse,572,Snow,Night,36,8,14,76.76,130
+INC-1280,Flood,4458,Rain,Night,29,9,31,100.0,1063
+INC-1281,Road Accident,39,Clear,Night,15,6,-7,24.63,2
+INC-1282,Flood,2701,Snow,Evening,36,9,29,100.0,486
+INC-1283,Flood,2014,Clear,Afternoon,9,5,2,85.16,349
+INC-1284,Flood,3813,Snow,Night,28,8,-3,97.64,769
+INC-1285,Flood,2528,Snow,Morning,27,6,-5,94.34,263
+INC-1286,Road Accident,44,Clear,Evening,5,4,24,16.38,0
+INC-1287,Flood,3983,Storm,Morning,32,6,2,100.0,904
+INC-1288,Road Accident,47,Fog,Morning,46,3,19,50.58,4
+INC-1289,Chemical Leak,405,Snow,Night,41,9,5,86.75,62
+INC-1290,Fire,283,Rain,Evening,35,7,-6,60.81,25
+INC-1291,Chemical Leak,295,Snow,Night,44,6,11,83.16,28
+INC-1292,Fire,235,Rain,Evening,35,4,23,31.9,13
+INC-1293,Chemical Leak,267,Rain,Evening,42,8,-10,66.27,28
+INC-1294,Road Accident,23,Snow,Morning,24,4,-5,32.63,2
+INC-1295,Fire,105,Fog,Afternoon,24,7,31,53.53,11
+INC-1296,Building Collapse,478,Storm,Morning,57,9,19,97.31,66
+INC-1297,Chemical Leak,23,Snow,Morning,38,6,24,69.7,2
+INC-1298,Building Collapse,179,Clear,Night,20,9,7,58.9,13
+INC-1299,Fire,293,Rain,Night,23,7,35,53.2,43
+INC-1300,Flood,337,Fog,Evening,36,9,24,53.46,31
+INC-1301,Road Accident,8,Snow,Night,24,7,14,41.19,0
+INC-1302,Building Collapse,222,Snow,Afternoon,34,10,7,73.25,16
+INC-1303,Road Accident,43,Rain,Afternoon,17,8,8,38.37,2
+INC-1304,Fire,9,Storm,Night,35,6,14,57.42,1
+INC-1305,Flood,2230,Fog,Evening,21,5,-2,74.63,426
+INC-1306,Fire,267,Storm,Evening,28,7,-7,50.0,30
+INC-1307,Chemical Leak,133,Fog,Night,22,7,26,74.45,27
+INC-1308,Building Collapse,623,Snow,Night,28,10,16,100.0,153
+INC-1309,Flood,2745,Storm,Night,48,9,16,100.0,504
+INC-1310,Road Accident,38,Storm,Afternoon,40,7,28,47.15,4
+INC-1311,Building Collapse,542,Fog,Night,36,7,26,87.59,138
+INC-1312,Building Collapse,213,Snow,Morning,22,7,0,61.69,15
+INC-1313,Flood,2657,Snow,Night,24,8,37,91.41,601
+INC-1314,Road Accident,40,Rain,Night,21,5,18,46.91,5
+INC-1315,Fire,109,Rain,Evening,41,4,30,34.84,9
+INC-1316,Fire,64,Snow,Morning,29,8,39,73.16,10
+INC-1317,Chemical Leak,452,Snow,Morning,27,7,4,72.5,91
+INC-1318,Building Collapse,904,Snow,Afternoon,34,10,-6,100.0,213
+INC-1319,Fire,204,Snow,Evening,42,4,34,61.34,32
+INC-1320,Flood,2811,Fog,Night,22,5,10,70.64,592
+INC-1321,Fire,215,Storm,Night,52,6,-6,45.06,20
+INC-1322,Flood,2137,Snow,Morning,25,6,20,78.5,495
+INC-1323,Chemical Leak,472,Clear,Afternoon,5,7,25,70.92,74
+INC-1324,Flood,1713,Rain,Morning,26,5,39,84.86,283
+INC-1325,Road Accident,2,Clear,Morning,16,8,21,33.69,0
+INC-1326,Road Accident,32,Rain,Evening,20,6,4,37.93,1
+INC-1327,Fire,128,Clear,Evening,25,5,11,23.09,4
+INC-1328,Fire,217,Storm,Evening,43,7,10,77.45,45
+INC-1329,Flood,2644,Snow,Afternoon,29,8,10,88.84,589
+INC-1330,Building Collapse,710,Fog,Night,29,8,35,90.6,87
+INC-1331,Chemical Leak,95,Rain,Afternoon,28,7,11,75.92,14
+INC-1332,Building Collapse,830,Clear,Night,5,8,4,61.61,86
+INC-1333,Chemical Leak,287,Rain,Night,14,8,-8,68.88,31
+INC-1334,Chemical Leak,28,Rain,Afternoon,24,8,26,63.46,1
+INC-1335,Road Accident,1,Storm,Night,31,6,-10,42.12,0
+INC-1336,Flood,1955,Clear,Night,9,6,-1,79.59,346
+INC-1337,Flood,3237,Fog,Afternoon,38,5,25,89.51,292
+INC-1338,Fire,94,Snow,Evening,41,5,3,29.99,3
+INC-1339,Chemical Leak,79,Storm,Night,47,9,-7,82.97,11
+INC-1340,Flood,1143,Snow,Evening,48,6,24,96.94,111
+INC-1341,Building Collapse,920,Snow,Night,34,7,35,81.18,127
+INC-1342,Fire,61,Rain,Night,29,8,-4,69.64,4
+INC-1343,Chemical Leak,345,Storm,Evening,50,7,-7,100.0,38
+INC-1344,Flood,2683,Clear,Night,19,6,20,65.41,419
+INC-1345,Flood,641,Clear,Morning,9,6,20,65.09,110
+INC-1346,Chemical Leak,28,Snow,Evening,35,9,19,69.34,2
+INC-1347,Building Collapse,677,Fog,Evening,37,7,34,62.98,57
+INC-1348,Building Collapse,247,Rain,Evening,34,10,36,59.02,31
+INC-1349,Building Collapse,449,Clear,Morning,27,7,-1,61.36,45
+INC-1350,Flood,3796,Snow,Morning,25,9,34,93.22,620
+INC-1351,Chemical Leak,329,Storm,Afternoon,44,6,10,100.0,63
+INC-1352,Fire,265,Storm,Evening,39,7,-7,69.95,18
+INC-1353,Road Accident,41,Rain,Afternoon,31,8,20,49.02,5
+INC-1354,Building Collapse,597,Fog,Evening,47,7,19,91.44,161
+INC-1355,Chemical Leak,409,Fog,Evening,32,7,2,70.01,43
+INC-1356,Building Collapse,890,Storm,Night,35,7,32,100.0,162
+INC-1357,Flood,3241,Storm,Morning,51,6,13,100.0,687
+INC-1358,Road Accident,7,Clear,Afternoon,18,7,33,39.63,0
+INC-1359,Building Collapse,70,Snow,Evening,26,8,12,63.31,6
+INC-1360,Fire,165,Snow,Morning,43,5,31,49.92,17
+INC-1361,Flood,1787,Fog,Morning,25,9,32,89.43,181
+INC-1362,Road Accident,22,Storm,Evening,42,3,-5,52.17,2
+INC-1363,Chemical Leak,14,Snow,Evening,49,7,-9,68.4,1
+INC-1364,Fire,148,Rain,Night,21,6,1,39.65,15
+INC-1365,Fire,142,Fog,Evening,33,6,21,37.98,8
+INC-1366,Chemical Leak,29,Rain,Morning,16,7,11,48.46,2
+INC-1367,Road Accident,41,Storm,Night,42,4,14,55.82,2
+INC-1368,Fire,48,Rain,Morning,22,4,24,31.76,4
+INC-1369,Fire,182,Storm,Night,47,6,0,57.61,14
+INC-1370,Fire,78,Clear,Afternoon,11,7,26,45.89,6
+INC-1371,Chemical Leak,441,Rain,Night,18,7,31,91.6,76
+INC-1372,Road Accident,6,Storm,Night,32,6,5,51.5,0
+INC-1373,Chemical Leak,110,Rain,Night,29,9,-7,68.93,19
+INC-1374,Fire,250,Snow,Night,34,6,5,50.74,15
+INC-1375,Flood,769,Clear,Evening,5,9,17,78.77,167
+INC-1376,Building Collapse,784,Snow,Night,46,9,14,92.83,127
+INC-1377,Building Collapse,276,Storm,Morning,36,7,27,73.87,42
+INC-1378,Flood,3090,Fog,Evening,34,8,10,100.0,852
+INC-1379,Fire,290,Snow,Evening,39,5,17,44.03,33
+INC-1380,Building Collapse,239,Clear,Night,22,7,23,35.88,21
+INC-1381,Fire,283,Rain,Morning,30,9,33,38.19,20
+INC-1382,Fire,275,Storm,Afternoon,27,6,9,56.36,25
+INC-1383,Building Collapse,297,Fog,Afternoon,35,10,-5,69.55,56
+INC-1384,Fire,128,Fog,Afternoon,28,4,12,32.93,11
+INC-1385,Chemical Leak,312,Rain,Afternoon,28,7,24,79.75,62
+INC-1386,Flood,1048,Rain,Morning,26,8,1,100.0,117
+INC-1387,Flood,2357,Rain,Afternoon,15,7,16,91.06,455
+INC-1388,Chemical Leak,100,Storm,Afternoon,53,7,3,90.07,15
+INC-1389,Fire,34,Clear,Afternoon,19,9,14,54.36,3
+INC-1390,Fire,274,Storm,Afternoon,36,5,11,55.87,43
+INC-1391,Chemical Leak,435,Storm,Morning,36,8,34,100.0,127
+INC-1392,Building Collapse,112,Storm,Morning,55,7,8,73.37,9
+INC-1393,Building Collapse,335,Snow,Morning,27,7,14,73.43,65
+INC-1394,Fire,231,Snow,Night,41,4,-7,41.03,15
+INC-1395,Flood,3298,Fog,Morning,33,9,0,100.0,986
+INC-1396,Road Accident,21,Fog,Afternoon,22,7,26,32.69,0
+INC-1397,Chemical Leak,454,Clear,Evening,5,6,6,61.67,31
+INC-1398,Road Accident,32,Clear,Morning,13,3,36,10.0,0
+INC-1399,Road Accident,29,Snow,Night,31,8,27,50.1,3
+INC-1400,Fire,161,Snow,Night,29,6,-4,42.87,17
+INC-1401,Fire,71,Clear,Evening,12,9,13,37.1,5
+INC-1402,Chemical Leak,448,Rain,Morning,17,6,12,91.18,41
+INC-1403,Building Collapse,622,Storm,Evening,39,10,16,100.0,79
+INC-1404,Road Accident,42,Fog,Evening,39,3,24,36.78,2
+INC-1405,Road Accident,49,Fog,Night,20,7,35,29.74,1
+INC-1406,Fire,140,Clear,Afternoon,19,6,15,10.69,2
+INC-1407,Road Accident,42,Snow,Afternoon,49,5,-2,31.18,3
+INC-1408,Road Accident,49,Storm,Night,48,3,10,50.51,6
+INC-1409,Road Accident,13,Snow,Morning,35,5,0,18.43,0
+INC-1410,Flood,3729,Snow,Evening,27,9,33,100.0,873
+INC-1411,Flood,1232,Storm,Afternoon,40,8,34,100.0,300
+INC-1412,Road Accident,28,Clear,Morning,11,4,14,15.68,0
+INC-1413,Fire,219,Clear,Night,17,4,7,29.7,9
+INC-1414,Fire,165,Storm,Afternoon,46,7,8,79.6,36
+INC-1415,Chemical Leak,341,Clear,Evening,26,7,28,88.89,55
+INC-1416,Fire,289,Snow,Evening,30,4,0,43.23,15
+INC-1417,Road Accident,9,Clear,Evening,8,3,9,40.4,0
+INC-1418,Chemical Leak,126,Storm,Evening,32,7,5,85.62,20
+INC-1419,Fire,217,Fog,Afternoon,39,9,12,80.52,46
+INC-1420,Building Collapse,343,Snow,Afternoon,45,10,32,91.69,48
+INC-1421,Fire,126,Storm,Evening,37,9,21,64.66,21
+INC-1422,Fire,160,Storm,Afternoon,47,7,12,76.4,21
+INC-1423,Road Accident,36,Fog,Morning,22,6,28,20.93,1
+INC-1424,Chemical Leak,165,Storm,Morning,34,6,26,77.2,16
+INC-1425,Building Collapse,718,Storm,Evening,44,8,32,100.0,127
+INC-1426,Flood,3646,Storm,Morning,41,7,27,100.0,978
+INC-1427,Building Collapse,489,Rain,Night,15,10,20,90.64,105
+INC-1428,Fire,71,Rain,Morning,25,6,15,27.48,2
+INC-1429,Fire,129,Fog,Afternoon,28,8,26,47.59,17
+INC-1430,Road Accident,37,Snow,Night,47,5,-7,44.92,1
+INC-1431,Flood,4254,Rain,Evening,31,8,-7,100.0,1259
+INC-1432,Flood,2452,Storm,Morning,31,9,12,100.0,372
+INC-1433,Fire,55,Rain,Afternoon,30,5,35,30.22,3
+INC-1434,Chemical Leak,30,Clear,Morning,16,9,-7,71.85,2
+INC-1435,Flood,1234,Snow,Night,33,6,6,69.75,212
+INC-1436,Road Accident,18,Fog,Night,46,8,8,49.39,0
+INC-1437,Road Accident,17,Storm,Afternoon,33,7,8,46.75,1
+INC-1438,Chemical Leak,100,Clear,Evening,6,6,34,43.55,10
+INC-1439,Road Accident,39,Clear,Evening,5,6,9,26.35,1
+INC-1440,Chemical Leak,21,Snow,Evening,38,7,8,60.2,3
+INC-1441,Fire,74,Rain,Night,18,5,0,32.51,3
+INC-1442,Chemical Leak,225,Clear,Morning,22,8,39,71.45,30
+INC-1443,Building Collapse,653,Storm,Afternoon,42,9,-4,100.0,190
+INC-1444,Building Collapse,97,Storm,Evening,40,9,34,83.9,22
+INC-1445,Flood,2590,Clear,Morning,18,9,5,84.96,555
+INC-1446,Road Accident,22,Snow,Afternoon,43,7,-1,46.89,1
+INC-1447,Building Collapse,243,Snow,Afternoon,45,7,19,50.82,35
+INC-1448,Chemical Leak,312,Fog,Evening,34,8,-3,90.79,32
+INC-1449,Fire,145,Snow,Morning,28,8,25,39.29,13
+INC-1450,Road Accident,40,Clear,Night,5,3,19,35.96,3
+INC-1451,Fire,294,Storm,Night,48,8,5,84.67,58
+INC-1452,Chemical Leak,154,Snow,Night,30,8,5,62.96,23
+INC-1453,Flood,2258,Clear,Night,7,8,-8,78.62,462
+INC-1454,Fire,124,Storm,Afternoon,52,9,18,88.56,23
+INC-1455,Chemical Leak,167,Snow,Evening,36,6,8,71.81,20
+INC-1456,Fire,285,Snow,Morning,42,9,12,65.18,49
+INC-1457,Building Collapse,615,Snow,Night,40,10,3,100.0,118
+INC-1458,Chemical Leak,375,Clear,Night,27,9,4,86.85,41
+INC-1459,Flood,1135,Storm,Afternoon,49,6,23,100.0,277
+INC-1460,Flood,1364,Rain,Morning,32,6,27,100.0,263
+INC-1461,Chemical Leak,399,Clear,Afternoon,19,6,18,71.32,81
+INC-1462,Flood,4828,Storm,Afternoon,37,5,-2,100.0,1244
+INC-1463,Building Collapse,960,Clear,Afternoon,14,9,38,93.21,157
+INC-1464,Flood,3592,Rain,Afternoon,41,5,18,100.0,864
+INC-1465,Chemical Leak,403,Rain,Morning,36,8,10,81.81,90
+INC-1466,Building Collapse,150,Snow,Night,43,7,-7,44.28,8
+INC-1467,Chemical Leak,476,Fog,Night,30,8,31,92.86,53
+INC-1468,Chemical Leak,313,Fog,Evening,25,8,36,78.6,62
+INC-1469,Flood,991,Rain,Night,23,5,26,83.06,217
+INC-1470,Fire,35,Snow,Night,43,5,-2,47.31,3
+INC-1471,Flood,3271,Storm,Morning,48,9,-2,100.0,416
+INC-1472,Flood,1039,Fog,Morning,27,9,-10,92.71,167
+INC-1473,Flood,2196,Snow,Night,44,6,-1,97.7,220
+INC-1474,Fire,169,Clear,Evening,24,9,11,50.83,9
+INC-1475,Flood,486,Clear,Morning,16,5,13,40.74,48
+INC-1476,Chemical Leak,418,Fog,Night,20,9,9,64.24,38
+INC-1477,Road Accident,28,Fog,Morning,31,4,31,29.89,2
+INC-1478,Road Accident,30,Fog,Afternoon,20,3,-5,10.0,0
+INC-1479,Flood,4125,Fog,Night,43,8,25,90.08,779
+INC-1480,Chemical Leak,237,Rain,Morning,36,8,21,76.84,46
+INC-1481,Road Accident,8,Clear,Evening,24,7,29,38.68,0
+INC-1482,Fire,161,Fog,Afternoon,22,5,33,38.37,18
+INC-1483,Fire,32,Rain,Night,18,9,15,49.27,2
+INC-1484,Road Accident,42,Fog,Afternoon,48,3,34,44.29,2
+INC-1485,Flood,2094,Storm,Evening,25,7,36,100.0,593
+INC-1486,Road Accident,24,Snow,Evening,52,8,35,47.16,3
+INC-1487,Chemical Leak,420,Clear,Evening,23,7,10,66.71,81
+INC-1488,Fire,298,Storm,Morning,47,9,3,58.49,18
+INC-1489,Chemical Leak,487,Snow,Evening,27,7,6,94.94,136
+INC-1490,Flood,2480,Fog,Afternoon,30,6,30,85.48,322
+INC-1491,Flood,969,Clear,Afternoon,8,6,33,74.06,185
+INC-1492,Flood,3742,Storm,Night,26,9,32,100.0,1097
+INC-1493,Building Collapse,569,Fog,Morning,31,7,19,75.19,104
+INC-1494,Flood,4690,Fog,Night,31,5,6,83.65,997
+INC-1495,Flood,185,Rain,Morning,22,8,-1,36.85,17
+INC-1496,Road Accident,28,Fog,Evening,28,6,13,35.27,2
+INC-1497,Fire,95,Storm,Evening,37,9,18,75.87,14
+INC-1498,Building Collapse,702,Rain,Evening,22,7,-2,90.32,128
+INC-1499,Road Accident,7,Rain,Afternoon,15,3,9,27.36,0
+INC-1500,Building Collapse,724,Rain,Morning,32,9,16,100.0,216
+INC-1501,Flood,2103,Clear,Morning,20,9,-10,73.27,228
+INC-1502,Flood,253,Fog,Afternoon,37,9,12,46.66,12
+INC-1503,Chemical Leak,387,Snow,Afternoon,41,6,23,77.6,70
+INC-1504,Building Collapse,986,Rain,Afternoon,17,7,0,77.91,126
+INC-1505,Road Accident,19,Clear,Night,12,7,-4,49.46,2
+INC-1506,Flood,4600,Rain,Night,41,8,9,95.15,955
+INC-1507,Chemical Leak,50,Storm,Night,49,9,35,93.71,6
+INC-1508,Building Collapse,554,Fog,Afternoon,27,9,4,81.53,53
+INC-1509,Flood,3454,Snow,Afternoon,24,9,18,100.0,878
+INC-1510,Flood,4173,Fog,Night,18,8,38,71.21,549
+INC-1511,Road Accident,5,Storm,Night,53,8,-5,73.01,0
+INC-1512,Chemical Leak,147,Fog,Night,27,9,27,75.13,30
+INC-1513,Building Collapse,391,Rain,Afternoon,18,9,25,70.53,68
+INC-1514,Flood,2088,Clear,Night,31,9,39,82.79,216
+INC-1515,Flood,4691,Fog,Morning,34,7,25,81.1,1129
+INC-1516,Chemical Leak,31,Clear,Evening,25,6,-3,47.28,3
+INC-1517,Fire,206,Rain,Evening,19,6,6,42.8,25
+INC-1518,Road Accident,10,Fog,Afternoon,39,8,-7,52.75,0
+INC-1519,Road Accident,37,Clear,Afternoon,16,8,14,43.36,2
+INC-1520,Road Accident,17,Storm,Morning,49,3,29,46.1,0
+INC-1521,Road Accident,17,Clear,Night,16,4,2,24.05,0
+INC-1522,Chemical Leak,349,Storm,Afternoon,47,9,6,100.0,74
+INC-1523,Road Accident,1,Clear,Evening,11,3,4,25.07,0
+INC-1524,Building Collapse,913,Clear,Evening,5,10,38,83.45,112
+INC-1525,Fire,172,Storm,Afternoon,45,6,-6,68.71,28
+INC-1526,Building Collapse,439,Clear,Evening,14,10,8,47.87,57
+INC-1527,Road Accident,20,Rain,Night,27,6,-9,34.8,1
+INC-1528,Road Accident,37,Fog,Morning,44,8,-8,40.32,1
+INC-1529,Fire,117,Clear,Evening,24,7,16,46.33,9
+INC-1530,Building Collapse,951,Rain,Night,22,7,17,91.01,222
+INC-1531,Fire,54,Storm,Afternoon,48,4,-6,52.1,3
+INC-1532,Flood,4161,Clear,Morning,5,8,-4,66.81,510
+INC-1533,Building Collapse,871,Snow,Night,46,7,18,97.67,140
+INC-1534,Fire,206,Clear,Night,31,4,15,36.56,9
+INC-1535,Chemical Leak,67,Fog,Morning,27,6,7,60.59,9
+INC-1536,Chemical Leak,434,Fog,Afternoon,37,6,-8,74.52,49
+INC-1537,Building Collapse,685,Storm,Night,39,10,11,100.0,88
+INC-1538,Fire,299,Fog,Evening,34,6,9,44.84,29
+INC-1539,Building Collapse,645,Fog,Night,30,9,19,83.63,123
+INC-1540,Building Collapse,967,Clear,Evening,14,9,-2,92.86,145
+INC-1541,Fire,104,Fog,Morning,19,6,-10,54.83,7
+INC-1542,Road Accident,25,Snow,Morning,45,4,37,25.3,0
+INC-1543,Road Accident,1,Storm,Evening,40,3,-4,59.67,0
+INC-1544,Fire,168,Storm,Morning,34,6,25,67.95,28
+INC-1545,Flood,275,Rain,Morning,20,5,16,53.51,27
+INC-1546,Chemical Leak,428,Storm,Afternoon,53,9,17,100.0,86
+INC-1547,Fire,252,Storm,Evening,49,7,30,74.86,27
+INC-1548,Building Collapse,261,Snow,Night,33,7,38,45.1,16
+INC-1549,Building Collapse,210,Rain,Morning,26,9,19,36.19,22
+INC-1550,Road Accident,10,Clear,Evening,7,4,25,19.39,0
+INC-1551,Building Collapse,919,Clear,Afternoon,29,7,16,87.66,164
+INC-1552,Fire,183,Storm,Evening,34,9,-2,78.8,24
+INC-1553,Chemical Leak,453,Snow,Night,25,9,26,80.07,84
+INC-1554,Flood,4763,Clear,Afternoon,21,7,32,90.55,862
+INC-1555,Flood,3797,Storm,Morning,39,8,4,100.0,428
+INC-1556,Flood,162,Storm,Morning,52,7,11,63.29,20
+INC-1557,Flood,3378,Snow,Night,44,5,3,87.71,303
+INC-1558,Road Accident,1,Snow,Evening,29,8,37,64.57,0
+INC-1559,Building Collapse,291,Snow,Night,25,9,8,61.92,21
+INC-1560,Flood,4264,Fog,Evening,25,5,31,57.89,421
+INC-1561,Fire,56,Snow,Morning,38,4,35,43.67,6
+INC-1562,Road Accident,32,Fog,Afternoon,27,7,38,51.04,4
+INC-1563,Chemical Leak,222,Storm,Evening,38,6,34,83.42,37
+INC-1564,Fire,154,Clear,Evening,25,4,31,25.71,7
+INC-1565,Flood,3042,Storm,Night,43,5,12,100.0,413
+INC-1566,Chemical Leak,55,Snow,Afternoon,40,9,34,88.74,9
+INC-1567,Road Accident,22,Storm,Night,25,8,32,70.18,3
+INC-1568,Fire,126,Storm,Night,41,5,25,54.9,11
+INC-1569,Flood,2394,Clear,Morning,28,7,-3,78.96,561
+INC-1570,Road Accident,9,Storm,Afternoon,27,3,-8,52.13,0
+INC-1571,Fire,145,Rain,Night,11,9,18,58.57,17
+INC-1572,Fire,209,Rain,Morning,36,4,13,28.31,10
+INC-1573,Building Collapse,354,Storm,Evening,40,9,38,100.0,102
+INC-1574,Road Accident,1,Fog,Morning,39,3,-8,51.32,0
+INC-1575,Chemical Leak,389,Rain,Night,39,9,17,100.0,93
+INC-1576,Flood,1947,Storm,Night,54,5,5,100.0,305
+INC-1577,Fire,203,Fog,Afternoon,35,9,-9,57.01,20
+INC-1578,Chemical Leak,280,Storm,Night,39,8,35,100.0,78
+INC-1579,Flood,2707,Storm,Afternoon,37,6,-5,100.0,481
+INC-1580,Fire,189,Clear,Afternoon,17,7,38,37.4,18
+INC-1581,Road Accident,15,Fog,Night,26,6,8,32.48,0
+INC-1582,Chemical Leak,215,Clear,Evening,13,9,-7,84.4,41
+INC-1583,Flood,2766,Snow,Afternoon,31,7,38,88.5,427
+INC-1584,Chemical Leak,168,Storm,Night,33,9,4,93.08,28
+INC-1585,Building Collapse,363,Clear,Afternoon,21,7,21,40.1,29
+INC-1586,Fire,213,Snow,Afternoon,26,6,33,39.85,11
+INC-1587,Road Accident,28,Clear,Evening,22,8,20,45.46,2
+INC-1588,Flood,903,Clear,Evening,8,6,11,60.83,100
+INC-1589,Flood,153,Rain,Afternoon,41,7,34,60.86,13
+INC-1590,Flood,1729,Fog,Afternoon,24,8,15,81.92,374
+INC-1591,Fire,150,Rain,Afternoon,31,9,36,70.03,23
+INC-1592,Building Collapse,271,Snow,Morning,24,7,35,56.76,23
+INC-1593,Flood,3146,Fog,Evening,32,9,21,84.0,666
+INC-1594,Road Accident,6,Fog,Afternoon,22,6,1,33.41,0
+INC-1595,Chemical Leak,31,Clear,Morning,22,7,4,51.19,3
+INC-1596,Flood,3291,Snow,Night,40,6,14,97.04,955
+INC-1597,Chemical Leak,239,Snow,Night,28,7,0,69.58,43
+INC-1598,Chemical Leak,390,Clear,Afternoon,8,9,1,81.98,83
+INC-1599,Flood,2605,Clear,Night,14,7,20,69.55,195
+INC-1600,Road Accident,13,Fog,Evening,20,3,0,37.2,1
+INC-1601,Building Collapse,557,Fog,Afternoon,37,10,11,84.07,48
+INC-1602,Building Collapse,511,Snow,Morning,37,10,21,82.96,85
+INC-1603,Fire,7,Fog,Afternoon,44,8,8,48.87,0
+INC-1604,Flood,1696,Rain,Afternoon,29,9,-1,100.0,362
+INC-1605,Flood,3002,Rain,Evening,24,7,17,89.28,550
+INC-1606,Chemical Leak,324,Storm,Morning,47,6,1,100.0,62
+INC-1607,Flood,1137,Rain,Evening,21,7,16,98.82,264
+INC-1608,Building Collapse,771,Storm,Morning,51,10,33,100.0,184
+INC-1609,Chemical Leak,498,Rain,Afternoon,24,7,8,89.98,111
+INC-1610,Building Collapse,888,Fog,Evening,22,10,1,95.9,162
+INC-1611,Chemical Leak,439,Clear,Morning,20,7,39,62.49,70
+INC-1612,Fire,63,Clear,Evening,21,6,9,33.33,4
+INC-1613,Building Collapse,143,Fog,Night,28,7,26,53.2,20
+INC-1614,Chemical Leak,331,Clear,Night,30,9,0,58.54,21
+INC-1615,Chemical Leak,17,Storm,Evening,41,6,19,89.31,4
+INC-1616,Road Accident,20,Rain,Night,38,6,5,47.56,1
+INC-1617,Flood,4374,Snow,Morning,33,8,6,87.96,863
+INC-1618,Fire,123,Rain,Night,21,4,19,27.15,6
+INC-1619,Road Accident,12,Snow,Night,45,3,19,26.72,0
+INC-1620,Building Collapse,543,Storm,Afternoon,27,9,-4,100.0,105
+INC-1621,Flood,2875,Storm,Evening,48,6,9,100.0,847
+INC-1622,Road Accident,40,Rain,Evening,39,6,29,47.63,2
+INC-1623,Chemical Leak,65,Fog,Morning,30,9,17,61.77,6
+INC-1624,Flood,736,Rain,Night,17,9,15,93.95,116
+INC-1625,Fire,282,Storm,Night,51,5,27,68.78,49
+INC-1626,Building Collapse,177,Rain,Morning,35,8,33,52.02,10
+INC-1627,Fire,251,Storm,Night,55,5,31,48.1,18
+INC-1628,Chemical Leak,235,Snow,Afternoon,49,6,37,77.56,42
+INC-1629,Building Collapse,155,Storm,Evening,45,9,28,75.86,24
+INC-1630,Building Collapse,81,Rain,Night,20,7,15,40.61,8
+INC-1631,Chemical Leak,456,Snow,Night,36,9,8,75.63,79
+INC-1632,Flood,326,Snow,Morning,41,6,28,71.08,29
+INC-1633,Fire,233,Snow,Night,46,9,15,63.58,40
+INC-1634,Building Collapse,359,Rain,Evening,23,10,14,68.65,31
+INC-1635,Fire,124,Clear,Evening,22,7,17,48.67,11
+INC-1636,Road Accident,34,Fog,Night,27,8,-3,60.48,3
+INC-1637,Flood,3053,Fog,Morning,26,7,20,82.05,537
+INC-1638,Fire,194,Snow,Afternoon,52,7,20,63.24,18
+INC-1639,Flood,3577,Storm,Night,46,8,39,100.0,395
+INC-1640,Flood,2647,Clear,Night,21,9,25,67.13,211
+INC-1641,Fire,62,Fog,Afternoon,33,5,35,33.01,4
+INC-1642,Flood,414,Fog,Evening,35,6,26,70.0,37
+INC-1643,Fire,6,Snow,Night,37,9,19,54.46,0
+INC-1644,Chemical Leak,105,Storm,Morning,39,7,2,95.46,10
+INC-1645,Building Collapse,898,Clear,Night,21,10,4,96.44,244
+INC-1646,Flood,2861,Storm,Evening,51,8,19,100.0,766
+INC-1647,Building Collapse,50,Rain,Night,13,10,5,67.08,4
+INC-1648,Chemical Leak,280,Clear,Morning,8,9,-3,58.92,29
+INC-1649,Fire,236,Rain,Evening,34,5,32,36.95,20
+INC-1650,Road Accident,33,Fog,Night,39,4,29,34.23,1
+INC-1651,Building Collapse,982,Fog,Afternoon,38,7,-3,97.81,244
+INC-1652,Flood,4422,Fog,Evening,32,7,38,77.34,370
+INC-1653,Building Collapse,920,Snow,Evening,41,10,8,94.23,120
+INC-1654,Chemical Leak,37,Storm,Night,36,7,26,84.42,4
+INC-1655,Chemical Leak,308,Storm,Night,40,9,21,100.0,64
+INC-1656,Fire,232,Storm,Evening,40,7,24,64.01,40
+INC-1657,Fire,214,Snow,Evening,38,4,13,34.88,13
+INC-1658,Fire,141,Fog,Night,44,7,3,61.39,11
+INC-1659,Flood,3067,Fog,Afternoon,32,6,9,84.61,650
+INC-1660,Fire,14,Fog,Night,24,6,-6,36.46,1
+INC-1661,Building Collapse,605,Fog,Night,30,8,12,95.94,160
+INC-1662,Building Collapse,901,Rain,Morning,35,10,12,100.0,169
+INC-1663,Chemical Leak,75,Clear,Afternoon,11,7,10,50.7,7
+INC-1664,Fire,120,Snow,Evening,40,9,27,64.13,9
+INC-1665,Road Accident,15,Rain,Night,38,8,13,50.41,0
+INC-1666,Building Collapse,950,Snow,Night,42,8,-7,88.38,230
+INC-1667,Fire,155,Rain,Afternoon,18,6,-1,40.53,10
+INC-1668,Chemical Leak,209,Storm,Night,39,8,34,89.18,22
+INC-1669,Chemical Leak,367,Snow,Evening,32,6,37,67.27,63
+INC-1670,Building Collapse,409,Snow,Evening,44,10,15,81.71,70
+INC-1671,Chemical Leak,390,Storm,Evening,39,7,20,100.0,99
+INC-1672,Chemical Leak,193,Snow,Afternoon,27,8,20,76.09,28
+INC-1673,Building Collapse,601,Storm,Evening,39,7,-10,100.0,76
+INC-1674,Building Collapse,539,Storm,Evening,38,8,4,100.0,91
+INC-1675,Building Collapse,57,Snow,Evening,34,8,6,66.3,7
+INC-1676,Road Accident,13,Storm,Evening,30,3,37,54.73,1
+INC-1677,Flood,1362,Clear,Night,19,9,16,86.69,302
+INC-1678,Road Accident,31,Storm,Afternoon,50,7,-5,60.26,3
+INC-1679,Flood,3176,Clear,Evening,24,6,-5,79.26,581
+INC-1680,Fire,246,Storm,Night,28,5,3,52.31,19
+INC-1681,Flood,4214,Snow,Afternoon,36,7,6,98.5,953
+INC-1682,Building Collapse,965,Fog,Evening,26,10,37,97.45,176
+INC-1683,Chemical Leak,336,Storm,Afternoon,42,8,24,100.0,57
+INC-1684,Fire,145,Fog,Afternoon,32,9,37,49.96,15
+INC-1685,Building Collapse,769,Clear,Afternoon,18,10,34,74.65,82
+INC-1686,Building Collapse,913,Clear,Morning,5,7,-3,89.61,238
+INC-1687,Road Accident,45,Storm,Night,38,4,33,50.2,6
+INC-1688,Fire,129,Rain,Morning,27,4,19,34.89,10
+INC-1689,Chemical Leak,230,Rain,Night,17,8,-6,84.89,19
+INC-1690,Road Accident,46,Snow,Afternoon,29,6,-5,49.59,4
+INC-1691,Flood,707,Storm,Evening,38,5,9,99.14,100
+INC-1692,Fire,110,Clear,Afternoon,10,6,21,29.69,8
+INC-1693,Chemical Leak,398,Clear,Afternoon,28,9,-5,81.47,60
+INC-1694,Road Accident,1,Rain,Morning,37,6,0,55.22,0
+INC-1695,Road Accident,12,Snow,Afternoon,21,8,38,44.94,0
+INC-1696,Flood,940,Clear,Morning,22,6,36,83.06,199
+INC-1697,Flood,2117,Fog,Morning,46,9,-1,100.0,591
+INC-1698,Flood,1116,Storm,Night,55,6,14,100.0,147
+INC-1699,Chemical Leak,108,Fog,Night,29,8,10,87.46,27
+INC-1700,Building Collapse,952,Fog,Night,32,9,1,92.35,89
+INC-1701,Flood,4678,Rain,Morning,30,9,33,96.11,731
+INC-1702,Flood,338,Rain,Night,24,6,28,85.43,72
+INC-1703,Flood,2002,Rain,Morning,21,8,6,100.0,290
+INC-1704,Flood,3128,Storm,Afternoon,43,9,17,100.0,492
+INC-1705,Building Collapse,712,Fog,Night,37,10,-4,89.65,70
+INC-1706,Road Accident,37,Fog,Evening,20,7,36,29.4,2
+INC-1707,Fire,68,Snow,Morning,45,8,18,58.13,5
+INC-1708,Building Collapse,887,Rain,Night,14,9,11,100.0,235
+INC-1709,Flood,144,Rain,Morning,33,7,2,46.43,9
+INC-1710,Flood,2009,Snow,Afternoon,28,9,36,88.31,323
+INC-1711,Road Accident,6,Storm,Evening,47,6,9,52.32,0
+INC-1712,Flood,487,Fog,Morning,36,6,9,61.29,34
+INC-1713,Flood,1959,Storm,Afternoon,37,9,2,100.0,584
+INC-1714,Fire,110,Clear,Night,27,7,19,52.71,11
+INC-1715,Flood,2562,Rain,Night,31,7,-1,95.31,452
+INC-1716,Chemical Leak,325,Storm,Morning,47,9,20,100.0,68
+INC-1717,Flood,2151,Storm,Afternoon,40,6,1,100.0,232
+INC-1718,Building Collapse,274,Rain,Night,14,9,31,57.49,31
+INC-1719,Building Collapse,580,Snow,Evening,37,8,39,97.82,133
+INC-1720,Road Accident,45,Fog,Night,28,5,31,43.52,3
+INC-1721,Chemical Leak,370,Rain,Afternoon,23,7,5,85.21,44
+INC-1722,Chemical Leak,194,Clear,Night,25,9,5,67.29,37
+INC-1723,Chemical Leak,433,Storm,Morning,45,6,-2,85.84,83
+INC-1724,Chemical Leak,235,Clear,Morning,25,9,-9,85.82,27
+INC-1725,Chemical Leak,420,Fog,Afternoon,40,7,18,57.87,63
+INC-1726,Chemical Leak,110,Fog,Afternoon,40,9,13,85.8,25
+INC-1727,Building Collapse,777,Storm,Night,35,8,1,95.91,96
+INC-1728,Fire,40,Rain,Night,18,8,3,27.28,2
+INC-1729,Fire,152,Fog,Night,22,5,12,46.64,7
+INC-1730,Fire,127,Snow,Afternoon,27,6,10,56.94,7
+INC-1731,Chemical Leak,207,Snow,Night,35,9,34,99.22,54
+INC-1732,Chemical Leak,326,Clear,Night,13,8,30,65.28,34
+INC-1733,Flood,3966,Clear,Night,29,8,3,54.79,268
+INC-1734,Flood,964,Clear,Afternoon,5,9,17,93.29,262
+INC-1735,Chemical Leak,300,Clear,Morning,13,6,14,58.68,31
+INC-1736,Road Accident,2,Storm,Morning,37,7,-3,57.56,0
+INC-1737,Chemical Leak,84,Clear,Morning,19,8,13,54.66,8
+INC-1738,Road Accident,26,Clear,Evening,21,5,-10,25.17,1
+INC-1739,Road Accident,2,Rain,Afternoon,34,7,-3,23.43,0
+INC-1740,Road Accident,33,Storm,Night,31,5,16,53.22,2
+INC-1741,Road Accident,39,Snow,Night,43,6,8,37.58,3
+INC-1742,Fire,177,Fog,Afternoon,35,6,11,46.17,21
+INC-1743,Flood,2358,Clear,Afternoon,16,8,15,62.82,180
+INC-1744,Chemical Leak,35,Snow,Afternoon,38,8,9,83.9,8
+INC-1745,Building Collapse,256,Clear,Morning,31,9,31,58.67,39
+INC-1746,Flood,2953,Snow,Night,32,6,-5,79.29,521
+INC-1747,Chemical Leak,74,Snow,Afternoon,34,8,36,62.76,8
+INC-1748,Building Collapse,316,Snow,Evening,31,9,1,68.84,37
+INC-1749,Building Collapse,678,Storm,Afternoon,42,7,13,100.0,193
+INC-1750,Fire,273,Clear,Night,26,4,-7,47.12,24
+INC-1751,Chemical Leak,20,Clear,Afternoon,29,9,12,60.48,3
+INC-1752,Building Collapse,547,Clear,Morning,18,10,15,76.0,47
+INC-1753,Chemical Leak,279,Clear,Night,5,7,-8,71.44,37
+INC-1754,Chemical Leak,423,Clear,Afternoon,19,9,14,57.08,56
+INC-1755,Fire,68,Snow,Night,48,9,27,48.49,6
+INC-1756,Building Collapse,266,Fog,Afternoon,26,8,6,79.09,45
+INC-1757,Fire,234,Rain,Evening,29,6,-10,39.26,12
+INC-1758,Building Collapse,237,Fog,Evening,18,8,-7,72.76,47
+INC-1759,Chemical Leak,300,Fog,Evening,40,9,25,96.24,60
+INC-1760,Building Collapse,684,Storm,Afternoon,46,9,7,100.0,119
+INC-1761,Chemical Leak,430,Rain,Night,25,6,37,85.91,80
+INC-1762,Flood,3815,Storm,Morning,29,7,7,100.0,899
+INC-1763,Chemical Leak,392,Fog,Afternoon,46,7,34,74.98,52
+INC-1764,Road Accident,44,Fog,Night,37,8,7,58.47,6
+INC-1765,Fire,37,Storm,Night,34,5,19,53.71,2
+INC-1766,Chemical Leak,402,Storm,Night,51,7,18,100.0,75
+INC-1767,Road Accident,39,Rain,Evening,26,7,7,37.81,3
+INC-1768,Road Accident,43,Rain,Night,26,4,26,27.31,1
+INC-1769,Building Collapse,245,Rain,Evening,18,7,11,31.72,11
+INC-1770,Building Collapse,432,Snow,Morning,37,8,10,70.52,63
+INC-1771,Chemical Leak,421,Snow,Night,44,9,38,90.32,81
+INC-1772,Chemical Leak,438,Fog,Afternoon,25,7,-6,76.88,48
+INC-1773,Road Accident,39,Rain,Evening,30,4,18,47.06,1
+INC-1774,Building Collapse,436,Storm,Morning,36,9,-5,100.0,126
+INC-1775,Road Accident,3,Storm,Morning,47,4,10,48.42,0
+INC-1776,Chemical Leak,145,Rain,Morning,27,8,37,62.87,11
+INC-1777,Flood,2162,Snow,Morning,33,6,13,80.02,354
+INC-1778,Fire,5,Rain,Afternoon,27,5,38,16.77,0
+INC-1779,Road Accident,43,Rain,Evening,28,8,32,47.82,2
+INC-1780,Flood,3361,Clear,Afternoon,11,9,17,73.53,489
+INC-1781,Building Collapse,281,Clear,Night,19,10,-7,72.47,27
+INC-1782,Building Collapse,372,Fog,Afternoon,27,8,5,45.3,18
+INC-1783,Road Accident,18,Rain,Evening,20,4,34,26.83,0
+INC-1784,Flood,1954,Snow,Night,35,8,36,100.0,583
+INC-1785,Chemical Leak,318,Storm,Evening,43,7,34,100.0,46
+INC-1786,Flood,2380,Storm,Night,49,5,11,100.0,397
+INC-1787,Road Accident,28,Clear,Night,5,6,17,21.17,1
+INC-1788,Flood,2400,Rain,Evening,23,5,24,89.16,448
+INC-1789,Flood,4016,Snow,Morning,46,8,5,89.63,815
+INC-1790,Chemical Leak,428,Rain,Afternoon,29,9,33,100.0,79
+INC-1791,Fire,89,Storm,Night,33,4,-5,65.98,10
+INC-1792,Flood,4259,Rain,Afternoon,26,7,21,100.0,916
+INC-1793,Flood,3396,Rain,Night,40,9,12,96.01,531
+INC-1794,Chemical Leak,437,Rain,Night,35,7,36,91.29,102
+INC-1795,Chemical Leak,349,Storm,Evening,38,8,34,100.0,63
+INC-1796,Road Accident,21,Snow,Night,27,4,12,39.52,0
+INC-1797,Building Collapse,77,Storm,Afternoon,34,7,39,59.03,8
+INC-1798,Building Collapse,380,Fog,Night,25,7,34,46.94,22
+INC-1799,Building Collapse,934,Fog,Morning,22,9,8,89.24,187
+INC-1800,Chemical Leak,250,Clear,Morning,25,9,-10,74.12,51
+INC-1801,Fire,230,Clear,Night,24,8,8,57.64,29
+INC-1802,Building Collapse,231,Rain,Morning,18,9,31,47.21,15
+INC-1803,Building Collapse,488,Clear,Afternoon,9,8,34,41.74,44
+INC-1804,Chemical Leak,131,Snow,Evening,34,7,20,71.98,13
+INC-1805,Fire,92,Fog,Night,26,7,29,32.49,6
+INC-1806,Road Accident,9,Clear,Morning,5,4,5,24.56,0
+INC-1807,Chemical Leak,270,Fog,Night,30,9,36,60.81,38
+INC-1808,Fire,17,Clear,Evening,18,7,20,37.99,1
+INC-1809,Chemical Leak,265,Storm,Morning,47,6,26,78.4,26
+INC-1810,Chemical Leak,406,Snow,Afternoon,47,9,-1,100.0,116
+INC-1811,Fire,107,Clear,Afternoon,31,8,-6,46.91,12
+INC-1812,Building Collapse,138,Rain,Evening,30,9,33,53.39,16
+INC-1813,Flood,3546,Storm,Night,28,7,0,100.0,812
+INC-1814,Fire,196,Storm,Night,48,8,8,82.09,42
+INC-1815,Road Accident,41,Fog,Afternoon,37,6,33,44.02,5
+INC-1816,Building Collapse,232,Storm,Morning,43,8,27,71.39,42
+INC-1817,Fire,148,Clear,Night,9,9,-3,44.01,7
+INC-1818,Road Accident,16,Snow,Night,47,6,6,55.98,2
+INC-1819,Fire,38,Clear,Afternoon,29,7,13,34.5,1
+INC-1820,Fire,138,Snow,Night,50,8,6,49.41,10
+INC-1821,Flood,3653,Fog,Morning,22,8,3,97.52,673
+INC-1822,Chemical Leak,185,Clear,Afternoon,28,6,28,66.2,35
+INC-1823,Building Collapse,785,Fog,Night,29,8,34,92.12,174
+INC-1824,Flood,290,Clear,Morning,5,8,34,43.1,24
+INC-1825,Flood,1066,Fog,Morning,45,8,0,96.5,242
+INC-1826,Building Collapse,978,Storm,Morning,32,8,30,100.0,252
+INC-1827,Building Collapse,609,Fog,Afternoon,20,10,36,66.58,49
+INC-1828,Road Accident,14,Clear,Evening,23,7,12,20.56,0
+INC-1829,Building Collapse,128,Fog,Afternoon,30,8,25,60.82,11
+INC-1830,Chemical Leak,88,Snow,Evening,42,8,23,71.39,8
+INC-1831,Road Accident,30,Rain,Morning,26,6,23,51.09,2
+INC-1832,Chemical Leak,245,Storm,Morning,50,7,7,100.0,49
+INC-1833,Fire,257,Snow,Afternoon,32,4,16,40.8,15
+INC-1834,Fire,213,Storm,Night,46,8,19,57.34,31
+INC-1835,Flood,3656,Clear,Evening,16,6,5,56.47,312
+INC-1836,Road Accident,2,Snow,Afternoon,46,6,23,39.0,0
+INC-1837,Flood,3831,Fog,Night,27,7,29,98.98,742
+INC-1838,Road Accident,42,Rain,Night,19,3,32,16.45,0
+INC-1839,Fire,101,Fog,Evening,21,5,22,41.24,10
+INC-1840,Building Collapse,181,Clear,Morning,17,10,17,58.8,30
+INC-1841,Flood,2465,Rain,Night,33,6,31,90.8,346
+INC-1842,Building Collapse,674,Snow,Evening,44,7,2,94.59,167
+INC-1843,Flood,1018,Clear,Morning,10,7,-7,87.49,265
+INC-1844,Fire,252,Storm,Night,40,5,29,69.99,48
+INC-1845,Flood,3988,Storm,Morning,46,8,15,100.0,674
+INC-1846,Building Collapse,812,Clear,Afternoon,20,9,-5,92.04,74
+INC-1847,Road Accident,1,Snow,Night,36,8,13,47.05,0
+INC-1848,Fire,87,Clear,Morning,30,9,24,39.62,10
+INC-1849,Flood,2273,Fog,Morning,41,9,31,80.64,222
+INC-1850,Chemical Leak,40,Fog,Evening,31,7,6,76.79,8
+INC-1851,Road Accident,22,Clear,Evening,29,5,8,18.34,0
+INC-1852,Road Accident,34,Snow,Morning,37,5,10,33.31,3
+INC-1853,Chemical Leak,228,Rain,Afternoon,35,6,29,67.36,21
+INC-1854,Road Accident,28,Rain,Afternoon,22,3,32,24.71,1
+INC-1855,Flood,1104,Storm,Evening,44,8,21,100.0,263
+INC-1856,Road Accident,10,Rain,Morning,30,4,1,36.85,0
+INC-1857,Building Collapse,487,Snow,Evening,49,9,-5,83.05,104
+INC-1858,Road Accident,6,Storm,Night,31,7,12,57.17,0
+INC-1859,Fire,113,Storm,Evening,53,6,-9,69.18,19
+INC-1860,Building Collapse,658,Snow,Afternoon,47,10,5,91.71,136
+INC-1861,Road Accident,23,Clear,Afternoon,5,7,30,42.07,1
+INC-1862,Flood,2662,Clear,Night,23,6,30,64.17,387
+INC-1863,Flood,3274,Fog,Night,30,6,23,73.92,575
+INC-1864,Flood,3268,Snow,Evening,47,6,1,100.0,563
+INC-1865,Road Accident,27,Fog,Afternoon,32,6,-9,49.76,2
+INC-1866,Flood,2160,Storm,Afternoon,52,5,15,100.0,479
+INC-1867,Road Accident,43,Storm,Afternoon,38,7,34,60.44,5
+INC-1868,Road Accident,46,Storm,Evening,48,3,26,46.19,3
+INC-1869,Road Accident,24,Fog,Afternoon,18,3,6,35.54,1
+INC-1870,Flood,2515,Snow,Evening,34,6,10,71.02,207
+INC-1871,Road Accident,17,Storm,Morning,37,4,26,44.37,1
+INC-1872,Chemical Leak,26,Rain,Afternoon,23,6,18,60.26,3
+INC-1873,Chemical Leak,385,Clear,Night,18,8,2,68.19,39
+INC-1874,Building Collapse,832,Snow,Evening,30,10,8,97.69,193
+INC-1875,Fire,178,Snow,Night,37,7,21,44.94,15
+INC-1876,Building Collapse,499,Storm,Afternoon,36,7,6,83.94,68
+INC-1877,Flood,742,Rain,Night,32,7,15,77.43,99
+INC-1878,Road Accident,36,Clear,Night,27,7,35,45.93,4
+INC-1879,Chemical Leak,327,Snow,Night,44,6,-1,82.69,30
+INC-1880,Chemical Leak,153,Fog,Night,28,7,17,64.04,22
+INC-1881,Chemical Leak,343,Clear,Evening,19,8,22,92.14,78
+INC-1882,Chemical Leak,310,Fog,Morning,20,9,-7,69.13,59
+INC-1883,Fire,48,Rain,Evening,29,4,23,10.0,1
+INC-1884,Building Collapse,710,Fog,Morning,33,10,29,100.0,190
+INC-1885,Chemical Leak,389,Snow,Evening,42,7,35,69.8,59
+INC-1886,Road Accident,12,Clear,Morning,5,4,23,18.29,0
+INC-1887,Fire,282,Storm,Afternoon,39,5,19,68.79,32
+INC-1888,Chemical Leak,497,Fog,Afternoon,32,8,-5,88.15,51
+INC-1889,Road Accident,7,Storm,Night,31,5,-6,46.73,0
+INC-1890,Road Accident,37,Fog,Afternoon,31,3,18,31.0,2
+INC-1891,Flood,988,Clear,Night,12,7,31,58.3,134
+INC-1892,Fire,39,Storm,Night,56,9,1,88.98,4
+INC-1893,Fire,227,Clear,Afternoon,6,6,-7,34.13,10
+INC-1894,Flood,965,Storm,Evening,50,6,-7,100.0,119
+INC-1895,Road Accident,10,Rain,Night,22,4,0,29.83,0
+INC-1896,Flood,3042,Snow,Morning,29,8,-3,87.78,655
+INC-1897,Road Accident,21,Snow,Evening,42,6,25,42.46,1
+INC-1898,Fire,257,Storm,Morning,45,9,39,83.15,36
+INC-1899,Fire,171,Clear,Evening,29,7,-4,25.78,6
+INC-1900,Fire,298,Rain,Afternoon,26,9,33,58.99,19
+INC-1901,Chemical Leak,60,Rain,Afternoon,40,7,10,62.09,7
+INC-1902,Flood,4024,Fog,Night,28,5,22,72.73,354
+INC-1903,Road Accident,32,Rain,Night,34,6,16,39.03,1
+INC-1904,Building Collapse,229,Rain,Night,28,8,14,63.98,22
+INC-1905,Road Accident,33,Clear,Afternoon,5,7,24,28.53,2
+INC-1906,Road Accident,18,Fog,Night,45,8,19,45.73,2
+INC-1907,Road Accident,11,Clear,Afternoon,5,4,36,15.4,0
+INC-1908,Building Collapse,650,Storm,Morning,36,10,7,100.0,163
+INC-1909,Chemical Leak,319,Clear,Afternoon,7,9,23,39.51,14
+INC-1910,Flood,2027,Storm,Afternoon,53,6,15,100.0,341
+INC-1911,Road Accident,26,Clear,Evening,12,5,0,27.78,1
+INC-1912,Road Accident,18,Fog,Evening,24,7,1,44.89,2
+INC-1913,Chemical Leak,97,Snow,Night,41,9,29,75.18,18
+INC-1914,Chemical Leak,338,Clear,Evening,18,9,2,79.64,60
+INC-1915,Flood,754,Snow,Afternoon,49,6,29,88.75,120
+INC-1916,Flood,3526,Fog,Morning,40,8,-10,100.0,1018
+INC-1917,Building Collapse,712,Storm,Morning,45,7,16,100.0,191
+INC-1918,Building Collapse,510,Storm,Morning,43,9,29,100.0,54
+INC-1919,Building Collapse,957,Storm,Afternoon,29,8,17,100.0,192
+INC-1920,Chemical Leak,334,Snow,Night,44,7,17,78.89,75
+INC-1921,Chemical Leak,342,Rain,Night,28,8,3,92.21,37
+INC-1922,Road Accident,38,Rain,Night,30,6,-4,49.32,5
+INC-1923,Chemical Leak,83,Rain,Afternoon,39,8,4,79.19,7
+INC-1924,Road Accident,19,Storm,Afternoon,52,8,1,68.58,2
+INC-1925,Building Collapse,659,Storm,Night,31,10,-2,100.0,180
+INC-1926,Chemical Leak,155,Clear,Evening,10,8,23,54.1,18
+INC-1927,Fire,211,Snow,Afternoon,32,7,-6,67.18,22
+INC-1928,Building Collapse,562,Snow,Night,43,9,24,100.0,58
+INC-1929,Road Accident,38,Snow,Night,23,8,-2,56.78,4
+INC-1930,Road Accident,23,Snow,Afternoon,43,4,29,36.21,1
+INC-1931,Fire,172,Fog,Morning,26,6,13,44.81,14
+INC-1932,Building Collapse,523,Storm,Morning,52,10,5,99.45,152
+INC-1933,Flood,3164,Rain,Evening,32,6,1,93.52,621
+INC-1934,Building Collapse,873,Snow,Night,40,10,12,97.08,152
+INC-1935,Chemical Leak,154,Fog,Morning,21,7,19,74.93,25
+INC-1936,Chemical Leak,215,Clear,Evening,6,7,9,54.92,17
+INC-1937,Chemical Leak,437,Storm,Morning,29,6,-9,100.0,73
+INC-1938,Road Accident,10,Fog,Afternoon,29,4,-6,15.66,0
+INC-1939,Road Accident,21,Clear,Afternoon,22,3,3,16.65,0
+INC-1940,Flood,4244,Clear,Night,20,5,20,78.42,637
+INC-1941,Flood,2294,Storm,Morning,42,8,2,100.0,578
+INC-1942,Road Accident,33,Clear,Afternoon,10,8,25,12.45,1
+INC-1943,Building Collapse,946,Fog,Evening,42,9,35,94.42,180
+INC-1944,Chemical Leak,413,Snow,Afternoon,49,7,17,82.73,56
+INC-1945,Chemical Leak,66,Rain,Afternoon,28,6,-10,42.24,6
+INC-1946,Building Collapse,475,Clear,Evening,10,7,29,43.53,41
+INC-1947,Chemical Leak,64,Storm,Afternoon,45,9,10,81.19,10
+INC-1948,Flood,472,Storm,Evening,47,9,-2,97.62,69
+INC-1949,Chemical Leak,72,Storm,Morning,30,7,6,80.41,8
+INC-1950,Building Collapse,515,Snow,Morning,47,7,6,81.35,50
+INC-1951,Flood,1960,Rain,Afternoon,27,6,8,95.52,416
+INC-1952,Building Collapse,578,Rain,Evening,35,8,12,79.38,85
+INC-1953,Building Collapse,320,Snow,Night,45,10,11,60.81,50
+INC-1954,Building Collapse,414,Fog,Evening,34,10,10,70.01,44
+INC-1955,Road Accident,32,Snow,Night,31,8,7,35.86,3
+INC-1956,Fire,31,Clear,Night,23,7,38,47.17,3
+INC-1957,Chemical Leak,263,Storm,Evening,34,7,7,89.21,29
+INC-1958,Road Accident,9,Snow,Evening,35,5,24,47.96,1
+INC-1959,Chemical Leak,176,Clear,Morning,25,9,32,98.58,23
+INC-1960,Road Accident,31,Storm,Morning,36,6,-7,54.2,4
+INC-1961,Chemical Leak,360,Snow,Afternoon,33,9,33,88.23,43
+INC-1962,Road Accident,38,Rain,Night,27,6,7,39.36,3
+INC-1963,Flood,2164,Storm,Evening,39,8,20,100.0,584
+INC-1964,Flood,2142,Fog,Afternoon,21,6,27,98.07,552
+INC-1965,Chemical Leak,366,Snow,Evening,24,7,11,66.0,56
+INC-1966,Fire,55,Clear,Morning,11,6,-4,34.71,2
+INC-1967,Road Accident,24,Clear,Morning,24,3,8,17.2,0
+INC-1968,Building Collapse,954,Snow,Night,34,9,10,100.0,277
+INC-1969,Fire,263,Snow,Afternoon,48,7,29,59.22,37
+INC-1970,Building Collapse,852,Storm,Afternoon,56,9,29,100.0,87
+INC-1971,Flood,1867,Clear,Evening,5,5,30,62.97,351
+INC-1972,Flood,4375,Clear,Evening,28,6,11,87.7,609
+INC-1973,Building Collapse,491,Clear,Night,27,10,9,57.84,76
+INC-1974,Flood,1136,Rain,Night,38,5,34,100.0,149
+INC-1975,Fire,44,Clear,Morning,17,9,-8,44.98,3
+INC-1976,Building Collapse,779,Snow,Morning,30,9,-1,95.61,82
+INC-1977,Building Collapse,636,Fog,Afternoon,22,7,-5,98.2,85
+INC-1978,Chemical Leak,425,Snow,Morning,45,9,39,100.0,67
+INC-1979,Fire,49,Storm,Morning,36,6,16,38.1,4
+INC-1980,Road Accident,38,Rain,Night,34,4,14,27.16,2
+INC-1981,Fire,53,Rain,Night,15,7,39,37.88,4
+INC-1982,Fire,278,Clear,Morning,25,9,26,35.25,20
+INC-1983,Flood,4877,Storm,Evening,41,7,12,100.0,647
+INC-1984,Building Collapse,871,Snow,Afternoon,23,8,17,100.0,133
+INC-1985,Building Collapse,886,Clear,Morning,26,9,34,89.24,196
+INC-1986,Chemical Leak,198,Rain,Night,31,8,-4,68.21,23
+INC-1987,Flood,4666,Rain,Afternoon,15,8,4,94.83,844
+INC-1988,Road Accident,48,Fog,Night,28,5,28,39.98,2
+INC-1989,Building Collapse,491,Clear,Morning,5,9,28,50.75,73
+INC-1990,Building Collapse,95,Clear,Night,5,8,-10,66.15,9
+INC-1991,Flood,3044,Snow,Evening,35,5,9,95.42,313
+INC-1992,Building Collapse,100,Rain,Evening,36,8,-6,49.84,12
+INC-1993,Fire,14,Rain,Evening,24,5,10,43.82,0
+INC-1994,Fire,181,Storm,Afternoon,38,6,35,67.83,29
+INC-1995,Chemical Leak,264,Fog,Afternoon,26,9,4,85.87,52
+INC-1996,Road Accident,1,Storm,Morning,30,7,36,56.77,0
+INC-1997,Building Collapse,198,Snow,Night,46,8,15,70.95,20
+INC-1998,Fire,178,Rain,Night,27,4,-3,53.63,15
+INC-1999,Chemical Leak,209,Clear,Morning,25,8,9,60.55,25

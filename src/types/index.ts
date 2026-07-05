@@ -1,12 +1,9 @@
 export type IncidentType =
-  | "Fire Outbreak"
-  | "Earthquake"
+  | "Fire"
+  | "Building Collapse"
   | "Flood"
   | "Road Accident"
-  | "Industrial Explosion"
-  | "Building Collapse";
-
-export type OccupancyLevel = "Low" | "Medium" | "High" | "Critical";
+  | "Chemical Leak";
 
 export type WeatherCondition =
   | "Clear"
@@ -22,7 +19,7 @@ export type RiskLevel = "Low" | "Moderate" | "High" | "Severe" | "Critical";
 
 export interface SimulationInput {
   incidentType: IncidentType;
-  occupancy: OccupancyLevel;
+  occupancy: number;
   weather: WeatherCondition;
   timeOfDay: TimeOfDay;
   responseEta: number; // minutes
@@ -69,12 +66,43 @@ export interface SimulationResult {
   rescueTeamsRequired: number;
   hospitalCapacityUsed: number; // percent
   estimatedContainmentTime: string;
-  confidenceScore: number; // 0-100
   resourceAllocation: ResourceAllocation[];
   impactBreakdown: ImpactBreakdownItem[];
-  responseImprovement: ResponseImprovementPoint[];
   timeline: TimelineEvent[];
   recommendations: string[];
   incidentId: string;
   generatedAt: string;
+  optimizationResult?: any;
+}
+
+export interface ModelMetrics {
+  mae: number;
+  rmse: number;
+  r2: number;
+  dataset_size: number;
+  feature_importance: Array<{
+    Feature: string;
+    Importance: number;
+  }>;
+}
+
+export interface OptimizationAllocation {
+  ambulances: number;
+  fire_engines: number;
+  rescue_teams: number;
+  hospital_beds: number;
+}
+
+export interface OptimizationResult {
+  status: string;
+  objective_value: number;
+  total_requested_resources: number;
+  total_allocated_resources: number;
+  fulfillment_percentage: number;
+  allocations: Record<string, OptimizationAllocation>;
+}
+
+export interface MultiIncidentResult {
+  incidents: any[];
+  optimization: OptimizationResult;
 }

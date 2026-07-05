@@ -114,7 +114,7 @@ export default function LandingPage() {
             </h1>
             <p className="mx-auto mt-6 max-w-2xl text-balance text-base leading-relaxed text-slate-400 sm:text-lg">
               A national-grade emergency response and resource optimization platform. ResQAI predicts
-              incident impact, optimizes dispatch across response units, and routes casualties to
+              incident impact using Machine Learning, optimizes dispatch across simultaneous emergencies with Linear Programming, and routes casualties to
               hospitals with capacity-aware triage — all in real time.
             </p>
             <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">

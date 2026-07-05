@@ -1,0 +1,60 @@
+{
+    "mae": 7.4735,
+    "rmse": 10.3045,
+    "r2": 0.8317,
+    "dataset_size": 1000,
+    "feature_importance": [
+        {
+            "Feature": "occupancy",
+            "Importance": 0.5938830241865953
+        },
+        {
+            "Feature": "incident_type_Chemical Leak",
+            "Importance": 0.10466863707851684
+        },
+        {
+            "Feature": "response_eta",
+            "Importance": 0.08750804373710504
+        },
+        {
+            "Feature": "severity_indicator",
+            "Importance": 0.08181902682363112
+        },
+        {
+            "Feature": "weather_Storm",
+            "Importance": 0.05586593746658422
+        },
+        {
+            "Feature": "weather_Clear",
+            "Importance": 0.04129232269292498
+        },
+        {
+            "Feature": "weather_Fog",
+            "Importance": 0.009279507305709317
+        },
+        {
+            "Feature": "weather_Rain",
+            "Importance": 0.00762654412564064
+        },
+        {
+            "Feature": "incident_type_Building Collapse",
+            "Importance": 0.007036520129764283
+        },
+        {
+            "Feature": "weather_Snow",
+            "Importance": 0.004841256230753194
+        },
+        {
+            "Feature": "incident_type_Road Accident",
+            "Importance": 0.0024631951843123285
+        },
+        {
+            "Feature": "incident_type_Fire",
+            "Importance": 0.0021183708123894223
+        },
+        {
+            "Feature": "incident_type_Flood",
+            "Importance": 0.0015976142260732483
+        }
+    ]
+}

@@ -6,7 +6,6 @@ import {
   CartesianGrid,
   Tooltip,
   ResponsiveContainer,
-  Cell,
 } from "recharts";
 import type { ResourceAllocation } from "../../types";
 
@@ -47,11 +46,8 @@ export default function ResourceAllocationChart({ data }: Props) {
         />
         <YAxis tick={{ fill: "#64748b", fontSize: 11 }} tickLine={false} axisLine={false} />
         <Tooltip content={<ChartTooltip />} cursor={{ fill: "#ffffff08" }} />
-        <Bar dataKey="required" radius={[4, 4, 0, 0]} maxBarSize={42}>
-          {data.map((d) => (
-            <Cell key={d.name} fill={d.color} />
-          ))}
-        </Bar>
+        <Bar dataKey="required" name="Demand" fill="#ff5a5f" radius={[4, 4, 0, 0]} maxBarSize={32} />
+        <Bar dataKey="available" name="Allocated" fill="#3ee9b5" radius={[4, 4, 0, 0]} maxBarSize={32} />
       </BarChart>
     </ResponsiveContainer>
   );

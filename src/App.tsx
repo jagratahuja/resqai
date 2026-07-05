@@ -18,9 +18,9 @@ export default function App() {
       <footer className="border-t border-ink-800 bg-ink-950">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 px-4 py-5 text-xs text-slate-600 sm:flex-row sm:px-6 lg:px-8">
           <span>
-            ResQAI · Emergency Response Command Center · Mock AI Engine
+            ResQAI · Emergency Response Command Center
           </span>
-          <span className="font-mono">v1.0.0 · System Status: Operational</span>
+          <span className="font-mono">v2.0.0 · System Status: Operational</span>
         </div>
       </footer>
     </div>

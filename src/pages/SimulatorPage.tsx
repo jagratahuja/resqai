@@ -6,7 +6,6 @@ import {
   Waves,
   Car,
   Factory,
-  Mountain,
   Users,
   CloudRain,
   Sun,
@@ -15,33 +14,31 @@ import {
   Gauge,
   MapPin,
   Zap,
-  AlertTriangle,
+  Network,
+  Activity
 } from "lucide-react";
 import type {
   IncidentType,
-  OccupancyLevel,
   WeatherCondition,
   TimeOfDay,
   SimulationInput,
 } from "../types";
 import {
   INCIDENT_TYPES,
-  OCCUPANCY_LEVELS,
   WEATHER_CONDITIONS,
   TIMES_OF_DAY,
   SAMPLE_LOCATIONS,
 } from "../data/mockEngine";
-import { runSimulation } from "../api/simulationApi";
+import { runSimulation, runMultiIncidentSimulation } from "../api/simulationApi";
 import LoadingOverlay from "../components/LoadingOverlay";
 import ErrorState from "../components/ErrorState";
 
 const INCIDENT_ICONS: Record<IncidentType, typeof Flame> = {
-  "Fire Outbreak": Flame,
-  Earthquake: Mountain,
-  Flood: Waves,
-  "Road Accident": Car,
-  "Industrial Explosion": Factory,
+  "Fire": Flame,
   "Building Collapse": Building,
+  "Flood": Waves,
+  "Road Accident": Car,
+  "Chemical Leak": Factory,
 };
 
 const WEATHER_ICONS: Record<WeatherCondition, typeof CloudRain> = {
@@ -60,20 +57,18 @@ const TIME_ICONS: Record<TimeOfDay, typeof Sun> = {
   Night: Clock,
 };
 
-const OCCUPANCY_COLORS: Record<OccupancyLevel, string> = {
-  Low: "text-emerald-400 border-emerald-500/30 bg-emerald-500/10",
-  Medium: "text-amber-400 border-amber-500/30 bg-amber-500/10",
-  High: "text-orange-400 border-orange-500/30 bg-orange-500/10",
-  Critical: "text-red-400 border-red-500/30 bg-red-500/10",
-};
+
 
 export default function SimulatorPage() {
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  const [incidentType, setIncidentType] = useState<IncidentType>("Fire Outbreak");
-  const [occupancy, setOccupancy] = useState<OccupancyLevel>("High");
+  const [simulationMode, setSimulationMode] = useState<"single" | "multi">("single");
+  const [multiCount, setMultiCount] = useState(4);
+
+  const [incidentType, setIncidentType] = useState<IncidentType>("Fire");
+  const [occupancy, setOccupancy] = useState<number>(200);
   const [weather, setWeather] = useState<WeatherCondition>("Clear");
   const [timeOfDay, setTimeOfDay] = useState<TimeOfDay>("Day");
   const [responseEta, setResponseEta] = useState(8);
@@ -83,20 +78,25 @@ export default function SimulatorPage() {
   const handleSubmit = async () => {
     setLoading(true);
     setError(null);
-    const input: SimulationInput = {
-      incidentType,
-      occupancy,
-      weather,
-      timeOfDay,
-      responseEta,
-      severity,
-      location,
-    };
     try {
-      const result = await runSimulation(input);
-      navigate("/dashboard", { state: { result, input } });
+      if (simulationMode === "single") {
+        const input: SimulationInput = {
+          incidentType,
+          occupancy,
+          weather,
+          timeOfDay,
+          responseEta,
+          severity,
+          location,
+        };
+        const result = await runSimulation(input);
+        navigate("/dashboard", { state: { result, input, mode: "single" } });
+      } else {
+        const multiResult = await runMultiIncidentSimulation(multiCount);
+        navigate("/dashboard", { state: { multiResult, mode: "multi" } });
+      }
     } catch (e) {
-      setError(e instanceof Error ? e.message : "Unknown error");
+      setError(e instanceof Error ? e.message : "API connection failed. Please ensure the backend is running.");
       setLoading(false);
     }
   };
@@ -120,18 +120,68 @@ export default function SimulatorPage() {
   return (
     <div className="mx-auto max-w-5xl px-4 py-10 sm:px-6 lg:px-8">
       <div className="mb-8">
-        <span className="chip border-accent/20 bg-accent/5 text-accent ring-1 ring-accent/20">
-          <Zap className="h-3.5 w-3.5" />
-          Scenario Configuration
-        </span>
-        <h1 className="mt-4 text-3xl font-bold tracking-tight text-slate-100">Emergency Simulator</h1>
-        <p className="mt-2 max-w-2xl text-slate-400">
-          Define an incident scenario. ResQAI will predict impact, classify risk, and generate an
-          optimized resource dispatch plan.
-        </p>
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div>
+            <span className="chip border-accent/20 bg-accent/5 text-accent ring-1 ring-accent/20">
+              <Zap className="h-3.5 w-3.5" />
+              Scenario Configuration
+            </span>
+            <h1 className="mt-4 text-3xl font-bold tracking-tight text-slate-100">Emergency Simulator</h1>
+            <p className="mt-2 max-w-2xl text-slate-400">
+              Define an incident scenario. ResQAI will predict impact, classify risk, and generate an
+              optimized resource dispatch plan.
+            </p>
+          </div>
+          
+          <div className="flex bg-ink-900/50 p-1 rounded-lg border border-ink-700 w-fit">
+            <button 
+              onClick={() => setSimulationMode("single")}
+              className={`px-4 py-2 rounded-md text-sm font-medium transition-colors flex items-center gap-2 ${simulationMode === 'single' ? 'bg-ink-800 text-slate-100 shadow-card' : 'text-slate-400 hover:text-slate-200'}`}
+            >
+              <Activity className="w-4 h-4" />
+              Single Incident
+            </button>
+            <button 
+              onClick={() => setSimulationMode("multi")}
+              className={`px-4 py-2 rounded-md text-sm font-medium transition-colors flex items-center gap-2 ${simulationMode === 'multi' ? 'bg-ink-800 text-slate-100 shadow-card border border-accent/20' : 'text-slate-400 hover:text-slate-200'}`}
+            >
+              <Network className="w-4 h-4 text-accent" />
+              Multi-Incident AI Optimization
+            </button>
+          </div>
+        </div>
       </div>
 
       <div className="grid gap-5 lg:grid-cols-3">
+        {simulationMode === "multi" ? (
+           <div className="lg:col-span-2 space-y-5">
+             <div className="card p-8 animate-fade-in text-center flex flex-col items-center justify-center border-accent/20 bg-accent/5">
+                <Network className="w-16 h-16 text-accent mb-6" />
+                <h2 className="text-2xl font-bold text-slate-100 mb-4">Multi-Incident Optimization Engine</h2>
+                <p className="text-slate-400 max-w-lg mb-8 leading-relaxed">
+                  The true power of ResQAI lies in handling simultaneous emergencies with limited resources. 
+                  This mode will generate random concurrent incidents and use Linear Programming to optimally 
+                  distribute available dispatch units globally.
+                </p>
+                
+                <div className="flex flex-col items-center gap-4 w-full max-w-xs">
+                  <label className="text-sm font-semibold text-slate-200">Number of Concurrent Incidents</label>
+                  <div className="flex items-center gap-4 w-full">
+                    <span className="font-mono text-sm text-slate-400">2</span>
+                    <input 
+                      type="range" min="2" max="8" step="1" 
+                      value={multiCount} 
+                      onChange={(e) => setMultiCount(Number(e.target.value))}
+                      className="h-2 flex-1 cursor-pointer appearance-none rounded-full bg-ink-700 accent-accent"
+                    />
+                    <span className="font-mono text-sm text-slate-400">8</span>
+                  </div>
+                  <div className="text-3xl font-mono font-bold text-accent mt-2">{multiCount}</div>
+                </div>
+             </div>
+           </div>
+        ) : (
+        <>
         {/* Left: form */}
         <div className="space-y-5 lg:col-span-2">
           {/* Incident type */}
@@ -165,23 +215,19 @@ export default function SimulatorPage() {
               <label className="label-text flex items-center gap-1.5">
                 <Users className="h-3.5 w-3.5" /> Occupancy Level
               </label>
-              <div className="grid grid-cols-2 gap-2">
-                {OCCUPANCY_LEVELS.map((o) => {
-                  const active = occupancy === o;
-                  return (
-                    <button
-                      key={o}
-                      onClick={() => setOccupancy(o)}
-                      className={`rounded-lg border px-3 py-2 text-sm font-medium transition-all ${
-                        active
-                          ? OCCUPANCY_COLORS[o] + " ring-1 ring-current/20"
-                          : "border-ink-600 bg-ink-900/40 text-slate-400 hover:border-ink-500"
-                      }`}
-                    >
-                      {o}
-                    </button>
-                  );
-                })}
+              <div className="mt-4 flex items-center gap-3">
+                <input
+                  type="range"
+                  min={10}
+                  max={2000}
+                  step={10}
+                  value={occupancy}
+                  onChange={(e) => setOccupancy(Number(e.target.value))}
+                  className="h-1.5 flex-1 cursor-pointer appearance-none rounded-full bg-ink-700 accent-accent"
+                />
+                <span className="w-16 text-right font-mono text-sm font-semibold text-accent">
+                  {occupancy}
+                </span>
               </div>
             </div>
 
@@ -308,13 +354,15 @@ export default function SimulatorPage() {
             </div>
           </div>
         </div>
+        </>
+        )}
 
         {/* Right: summary + submit */}
         <div className="lg:col-span-1">
           <div className="card sticky top-20 p-5 animate-fade-in">
             <h3 className="mb-4 text-sm font-semibold text-slate-100">Scenario Summary</h3>
             <dl className="space-y-2.5 text-sm">
-              {[
+              {simulationMode === "single" ? [
                 ["Incident", incidentType],
                 ["Occupancy", occupancy],
                 ["Weather", weather],
@@ -327,19 +375,24 @@ export default function SimulatorPage() {
                   <dt className="text-xs uppercase tracking-wider text-slate-500">{k}</dt>
                   <dd className="text-right text-sm font-medium text-slate-200">{v}</dd>
                 </div>
-              ))}
+              )) : (
+                <div className="flex items-start justify-between gap-3 border-b border-ink-700/60 pb-2.5">
+                  <dt className="text-xs uppercase tracking-wider text-slate-500">Total Incidents</dt>
+                  <dd className="text-right text-sm font-medium text-slate-200">{multiCount}</dd>
+                </div>
+              )}
             </dl>
 
-            <div className="mt-5 rounded-lg border border-signal-amber/20 bg-signal-amber/5 p-3">
-              <p className="flex items-start gap-2 text-xs text-slate-400">
-                <AlertTriangle className="mt-0.5 h-3.5 w-3.5 shrink-0 text-signal-amber" />
-                This simulation uses a mock AI engine for demonstration purposes.
+            <div className="mt-5 rounded-lg border border-accent/20 bg-accent/5 p-3">
+              <p className="flex items-start gap-2 text-xs text-slate-300">
+                <Zap className="mt-0.5 h-3.5 w-3.5 shrink-0 text-accent" />
+                Requests are processed by a real ML model trained on simulated emergency data.
               </p>
             </div>
 
             <button onClick={handleSubmit} className="btn-primary mt-5 w-full">
               <Zap className="h-4 w-4" />
-              Predict &amp; Optimize
+              {simulationMode === "single" ? "Predict & Optimize" : "Run Global Optimization"}
             </button>
           </div>
         </div>
