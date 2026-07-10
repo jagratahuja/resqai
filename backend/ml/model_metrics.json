@@ -1,60 +1,60 @@
 {
-    "mae": 7.4735,
-    "rmse": 10.3045,
-    "r2": 0.8317,
-    "dataset_size": 1000,
+    "mae": 7.015,
+    "rmse": 9.1372,
+    "r2": 0.8601,
+    "dataset_size": 20000000,
     "feature_importance": [
         {
             "Feature": "occupancy",
-            "Importance": 0.5938830241865953
+            "Importance": 0.612026215042718
         },
         {
             "Feature": "incident_type_Chemical Leak",
-            "Importance": 0.10466863707851684
-        },
-        {
-            "Feature": "response_eta",
-            "Importance": 0.08750804373710504
-        },
-        {
-            "Feature": "severity_indicator",
-            "Importance": 0.08181902682363112
+            "Importance": 0.13765949929377178
         },
         {
             "Feature": "weather_Storm",
-            "Importance": 0.05586593746658422
+            "Importance": 0.09160480771783402
+        },
+        {
+            "Feature": "severity_indicator",
+            "Importance": 0.07631038426672813
         },
         {
             "Feature": "weather_Clear",
-            "Importance": 0.04129232269292498
+            "Importance": 0.05836042768406138
         },
         {
-            "Feature": "weather_Fog",
-            "Importance": 0.009279507305709317
+            "Feature": "response_eta",
+            "Importance": 0.015409075079919338
         },
         {
             "Feature": "weather_Rain",
-            "Importance": 0.00762654412564064
-        },
-        {
-            "Feature": "incident_type_Building Collapse",
-            "Importance": 0.007036520129764283
+            "Importance": 0.0066917080603369
         },
         {
             "Feature": "weather_Snow",
-            "Importance": 0.004841256230753194
+            "Importance": 0.0013168124524045345
         },
         {
-            "Feature": "incident_type_Road Accident",
-            "Importance": 0.0024631951843123285
+            "Feature": "weather_Fog",
+            "Importance": 0.0003528532683234732
         },
         {
             "Feature": "incident_type_Fire",
-            "Importance": 0.0021183708123894223
+            "Importance": 8.671838219225012e-05
         },
         {
             "Feature": "incident_type_Flood",
-            "Importance": 0.0015976142260732483
+            "Importance": 7.890339688891157e-05
+        },
+        {
+            "Feature": "incident_type_Building Collapse",
+            "Importance": 6.639649553230344e-05
+        },
+        {
+            "Feature": "incident_type_Road Accident",
+            "Importance": 3.619885928897068e-05
         }
     ]
 }

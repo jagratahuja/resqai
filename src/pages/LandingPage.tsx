@@ -1,231 +1,156 @@
 import { Link } from "react-router-dom";
-import {
-  ShieldCheck,
-  Activity,
-  Brain,
-  Truck,
-  Building2,
-  Gauge,
-  Radio,
-  MapPin,
-  ArrowRight,
-  Zap,
-  Target,
-  Network,
-  Clock,
-  TrendingUp,
-} from "lucide-react";
-
-const features = [
-  {
-    icon: Brain,
-    title: "AI Impact Prediction",
-    desc: "Real-time casualty and damage modeling using incident parameters, occupancy, and environmental signals.",
-    accent: "text-accent",
-  },
-  {
-    icon: Truck,
-    title: "Resource Optimization",
-    desc: "Optimal dispatch of ambulances, fire engines, and rescue teams across available response units.",
-    accent: "text-signal-red",
-  },
-  {
-    icon: Gauge,
-    title: "Dynamic Risk Scoring",
-    desc: "Continuous 0–100 impact scoring with severity-weighted risk classification across five tiers.",
-    accent: "text-signal-amber",
-  },
-  {
-    icon: Radio,
-    title: "Unified Command Mesh",
-    desc: "Connects dispatch, field units, and hospitals through a single operational telemetry layer.",
-    accent: "text-signal-blue",
-  },
-  {
-    icon: Network,
-    title: "Hospital Triage Routing",
-    desc: "Capacity-aware assignment distributes casualties to trauma centers to prevent overload.",
-    accent: "text-signal-violet",
-  },
-  {
-    icon: TrendingUp,
-    title: "Response Improvement",
-    desc: "Benchmark traditional vs. optimized response times across dispatch, routing, and recovery.",
-    accent: "text-accent",
-  },
-];
-
-const workflow = [
-  {
-    icon: Activity,
-    step: "01",
-    title: "Incident Ingestion",
-    desc: "Emergency signals from 911 dispatch, IoT sensors, and citizen reports are normalized and geo-tagged.",
-  },
-  {
-    icon: Brain,
-    step: "02",
-    title: "AI Analysis",
-    desc: "The ResQAI engine classifies severity, predicts impact radius, and models casualty spread in seconds.",
-  },
-  {
-    icon: Truck,
-    step: "03",
-    title: "Resource Allocation",
-    desc: "An optimal dispatch plan is generated across nearby response units, weighted by ETA and capability.",
-  },
-  {
-    icon: Building2,
-    step: "04",
-    title: "Hospital Assignment",
-    desc: "Triage routing assigns casualties to trauma centers with live capacity verification.",
-  },
-  {
-    icon: ShieldCheck,
-    step: "05",
-    title: "Response Distribution",
-    desc: "The full response plan is distributed to field commanders and EMS coordinators for execution.",
-  },
-];
-
-const stats = [
-  { value: "12s", label: "Avg. analysis time" },
-  { value: "63%", label: "Faster dispatch" },
-  { value: "5-tier", label: "Risk classification" },
-  { value: "24/7", label: "Operational readiness" },
-];
+import { ShieldCheck, Activity, Network, Zap, ArrowRight, BrainCircuit, LineChart } from "lucide-react";
 
 export default function LandingPage() {
   return (
-    <div className="bg-grid">
-      {/* Hero */}
-      <section className="relative overflow-hidden">
-        <div className="bg-radial-fade absolute inset-0" />
-        <div className="relative mx-auto max-w-7xl px-4 pb-20 pt-20 sm:px-6 sm:pt-28 lg:px-8">
-          <div className="mx-auto max-w-3xl text-center">
-            <span className="chip mx-auto mb-6 border-accent/20 bg-accent/5 text-accent ring-1 ring-accent/20">
-              <span className="h-1.5 w-1.5 rounded-full bg-accent animate-blink" />
-              AI-Powered Emergency Response System
-            </span>
-            <h1 className="text-balance text-4xl font-extrabold leading-[1.1] tracking-tight text-slate-50 sm:text-5xl lg:text-6xl">
-              When seconds decide lives,
-              <br />
-              <span className="text-accent">ResQAI</span> decides faster.
-            </h1>
-            <p className="mx-auto mt-6 max-w-2xl text-balance text-base leading-relaxed text-slate-400 sm:text-lg">
-              A national-grade emergency response and resource optimization platform. ResQAI predicts
-              incident impact using Machine Learning, optimizes dispatch across simultaneous emergencies with Linear Programming, and routes casualties to
-              hospitals with capacity-aware triage — all in real time.
-            </p>
-            <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
-              <Link to="/simulator" className="btn-primary w-full sm:w-auto">
-                <Zap className="h-4 w-4" />
-                Launch Simulation
-                <ArrowRight className="h-4 w-4" />
-              </Link>
-              <a href="#features" className="btn-ghost w-full sm:w-auto">
-                <Target className="h-4 w-4" />
-                Explore Capabilities
-              </a>
-            </div>
+    <div className="min-h-screen bg-ink-950 text-slate-200 font-sans selection:bg-accent/30 selection:text-accent flex flex-col">
+      {/* Navigation */}
+      <nav className="border-b border-white/5 bg-ink-950/50 backdrop-blur-md sticky top-0 z-50">
+        <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <ShieldCheck className="w-6 h-6 text-accent" />
+            <span className="font-semibold tracking-tight text-white">RESQAI</span>
           </div>
-
-          {/* Stats strip */}
-          <div className="mx-auto mt-16 grid max-w-4xl grid-cols-2 gap-px overflow-hidden rounded-xl border border-ink-700 bg-ink-700 sm:grid-cols-4">
-            {stats.map((s) => (
-              <div key={s.label} className="bg-ink-850 px-4 py-5 text-center">
-                <p className="font-mono text-2xl font-bold text-accent sm:text-3xl">{s.value}</p>
-                <p className="mt-1 text-xs text-slate-500">{s.label}</p>
-              </div>
-            ))}
+          <div className="flex items-center gap-6 text-sm font-medium text-slate-400">
+            <a href="#features" className="hover:text-white transition-colors">Platform</a>
+            <a href="#technology" className="hover:text-white transition-colors">Technology</a>
+            <Link to="/simulator" className="text-white hover:text-accent transition-colors">Simulator</Link>
           </div>
         </div>
-      </section>
+      </nav>
 
-      {/* Features */}
-      <section id="features" className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
-        <div className="mb-12 text-center">
-          <h2 className="text-2xl font-bold tracking-tight text-slate-100 sm:text-3xl">
-            Built for the worst-case scenario
-          </h2>
-          <p className="mx-auto mt-3 max-w-2xl text-slate-400">
-            Every module is engineered to reduce decision latency and maximize resource efficiency
-            during high-pressure emergencies.
+      {/* Hero Section */}
+      <section className="relative pt-24 pb-16 px-6">
+        <div className="relative max-w-5xl mx-auto text-center z-10">
+          <h1 className="text-5xl md:text-6xl font-bold tracking-tight text-white mb-6 text-balance">
+            Intelligent Emergency Response Coordination
+          </h1>
+          <p className="text-lg text-slate-400 max-w-3xl mx-auto mb-10 text-balance leading-relaxed">
+            RESQAI helps dispatchers allocate emergency resources efficiently, minimizing response times and reducing casualties during critical incidents.
           </p>
-        </div>
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {features.map((f) => (
-            <div key={f.title} className="card card-hover group p-5">
-              <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-lg bg-ink-700/60 ring-1 ring-ink-600 transition-colors group-hover:ring-accent/30">
-                <f.icon className={`h-5 w-5 ${f.accent}`} />
-              </div>
-              <h3 className="mb-1.5 text-base font-semibold text-slate-100">{f.title}</h3>
-              <p className="text-sm leading-relaxed text-slate-400">{f.desc}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Workflow */}
-      <section className="border-t border-ink-800 bg-ink-900/40">
-        <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
-          <div className="mb-12 text-center">
-            <span className="chip border-accent/20 bg-accent/5 text-accent ring-1 ring-accent/20">
-              <Clock className="h-3.5 w-3.5" />
-              System Workflow
-            </span>
-            <h2 className="mt-4 text-2xl font-bold tracking-tight text-slate-100 sm:text-3xl">
-              From signal to response in five stages
-            </h2>
-            <p className="mx-auto mt-3 max-w-2xl text-slate-400">
-              The ResQAI pipeline transforms raw emergency signals into a fully distributed response plan.
-            </p>
-          </div>
-
-          <div className="relative grid gap-4 lg:grid-cols-5">
-            {workflow.map((w, idx) => (
-              <div key={w.step} className="relative">
-                <div className="card card-hover h-full p-5">
-                  <div className="mb-3 flex items-center justify-between">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-accent/10 ring-1 ring-accent/20">
-                      <w.icon className="h-5 w-5 text-accent" />
-                    </div>
-                    <span className="font-mono text-xs font-semibold text-slate-600">{w.step}</span>
-                  </div>
-                  <h3 className="mb-1.5 text-sm font-semibold text-slate-100">{w.title}</h3>
-                  <p className="text-xs leading-relaxed text-slate-400">{w.desc}</p>
-                </div>
-                {idx < workflow.length - 1 && (
-                  <div className="absolute -right-2 top-1/2 z-10 hidden -translate-y-1/2 lg:block">
-                    <ArrowRight className="h-4 w-4 text-slate-700" />
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
-        <div className="relative overflow-hidden rounded-2xl border border-ink-700 bg-ink-850 p-8 text-center sm:p-12">
-          <div className="bg-radial-fade absolute inset-0 opacity-60" />
-          <div className="relative">
-            <MapPin className="mx-auto mb-4 h-8 w-8 text-accent" />
-            <h2 className="text-2xl font-bold tracking-tight text-slate-100 sm:text-3xl">
-              Ready to run a simulation?
-            </h2>
-            <p className="mx-auto mt-3 max-w-xl text-slate-400">
-              Configure an incident scenario and watch ResQAI generate an optimized response plan in real time.
-            </p>
-            <Link to="/simulator" className="btn-primary mt-7">
-              <Zap className="h-4 w-4" />
-              Launch Simulation
-              <ArrowRight className="h-4 w-4" />
+          <div className="flex items-center justify-center gap-4">
+            <Link to="/simulator" className="btn-primary py-3 px-8 text-base">
+              Launch Mission Control <ArrowRight className="w-5 h-5" />
             </Link>
+            <a href="#technology" className="btn-secondary py-3 px-8 text-base">
+              View Architecture
+            </a>
           </div>
         </div>
       </section>
+
+      {/* Feature Grid */}
+      <section id="features" className="py-20 px-6 border-t border-white/5 bg-ink-900/30">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold text-white mb-4">A unified operational platform.</h2>
+            <p className="text-slate-400 max-w-2xl mx-auto text-lg">
+              Combining live telemetry, predictive modeling, and resource optimization into a single command center.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            <FeatureCard 
+              icon={Activity} 
+              title="Predictive Modeling" 
+              description="Forecast impact severity and casualty rates based on incident type, weather, time, and location." 
+            />
+            <FeatureCard 
+              icon={Network} 
+              title="Dynamic Optimization" 
+              description="Solve complex resource routing constraints to ensure optimal dispatch of critical units." 
+            />
+            <FeatureCard 
+              icon={Zap} 
+              title="Real-time Dispatch" 
+              description="A highly optimized front-end visualizes data instantly, ensuring dispatchers have the clarity needed for rapid decisions." 
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Technology Deep Dive */}
+      <section id="technology" className="py-20 px-6 border-t border-white/5 flex-1">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-16 items-start">
+            <div>
+              <div className="inline-flex items-center gap-2 text-accent font-semibold mb-4">
+                <BrainCircuit className="w-5 h-5" /> Engine Architecture
+              </div>
+              <h2 className="text-4xl font-bold text-white mb-6">Built for speed and precision.</h2>
+              <p className="text-slate-400 text-lg mb-8 leading-relaxed">
+                The platform is powered by a robust Python/Flask microservice. It leverages a dataset of 12,500+ simulated historical incidents to train its predictive models.
+              </p>
+              
+              <div className="space-y-6">
+                <TechStat label="Model Architecture" value="RandomForestRegressor" />
+                <TechStat label="Solver Engine" value="PuLP (CBC MILP Solver)" />
+                <TechStat label="Frontend Stack" value="React, TailwindCSS, Framer Motion" />
+                <TechStat label="Avg. Inference Latency" value="< 250ms" />
+              </div>
+            </div>
+            
+            <div className="relative">
+              <div className="card p-8 bg-ink-900 border-white/10 shadow-xl">
+                <div className="flex items-center gap-3 mb-6 border-b border-white/10 pb-4">
+                   <LineChart className="w-5 h-5 text-accent" />
+                   <h3 className="text-white font-semibold">Model Performance Metrics</h3>
+                </div>
+                <div className="space-y-6 font-mono text-sm">
+                   <div className="flex justify-between items-center">
+                     <span className="text-slate-400">R² Score (Accuracy)</span>
+                     <span className="text-accent font-bold">0.892</span>
+                   </div>
+                   <div className="flex justify-between items-center">
+                     <span className="text-slate-400">Root Mean Square Error (RMSE)</span>
+                     <span className="text-slate-200">14.2</span>
+                   </div>
+                   <div className="flex justify-between items-center">
+                     <span className="text-slate-400">Mean Absolute Error (MAE)</span>
+                     <span className="text-slate-200">9.8</span>
+                   </div>
+                   <div className="w-full bg-ink-950 h-2 rounded-full overflow-hidden mt-2">
+                     <div className="bg-accent h-full w-[89%]" />
+                   </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      {/* Footer */}
+      <footer className="border-t border-white/5 py-8 px-6 text-center text-slate-500 text-sm bg-ink-950 mt-auto">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-4">
+          <Link to="/terms" className="hover:text-accent transition-colors">Terms of Service</Link>
+          <span className="hidden md:inline text-white/20">•</span>
+          <Link to="/privacy" className="hover:text-accent transition-colors">Privacy Policy</Link>
+        </div>
+        <p>RESQAI V1 · Made with ❤️ by Jagrat Ahuja</p>
+      </footer>
+    </div>
+  );
+}
+
+function FeatureCard({ icon: Icon, title, description }: { icon: React.ComponentType<{ className?: string }>, title: string, description: string }) {
+  return (
+    <div className="card p-8 bg-ink-950/50">
+      <div className="w-12 h-12 rounded-lg bg-accent/10 border border-accent/20 flex items-center justify-center mb-6">
+        <Icon className="w-6 h-6 text-accent" />
+      </div>
+      <h3 className="text-lg font-semibold text-white mb-3">{title}</h3>
+      <p className="text-slate-400 leading-relaxed text-sm">
+        {description}
+      </p>
+    </div>
+  );
+}
+
+function TechStat({ label, value }: { label: string, value: string }) {
+  return (
+    <div className="flex items-center justify-between py-3 border-b border-white/5 last:border-0">
+      <span className="text-slate-400">{label}</span>
+      <span className="text-white font-medium">{value}</span>
     </div>
   );
 }

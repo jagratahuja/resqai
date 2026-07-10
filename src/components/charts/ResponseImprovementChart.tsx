@@ -14,12 +14,12 @@ interface Props {
   data: ResponseImprovementPoint[];
 }
 
-function ChartTooltip({ active, payload, label }: any) {
+function ChartTooltip({ active, payload, label }: { active?: boolean; payload?: Array<{ name: string; value: number; color: string }>; label?: string }) {
   if (!active || !payload?.length) return null;
   return (
     <div className="rounded-lg border border-ink-600 bg-ink-900 px-3 py-2 text-xs shadow-card">
       <p className="mb-1 font-semibold text-slate-200">{label}</p>
-      {payload.map((p: any) => (
+      {payload.map((p) => (
         <p key={p.name} style={{ color: p.color }} className="font-mono">
           {p.name}: {p.value}%
         </p>

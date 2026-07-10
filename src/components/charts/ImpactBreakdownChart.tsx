@@ -11,7 +11,7 @@ interface Props {
   data: ImpactBreakdownItem[];
 }
 
-function ChartTooltip({ active, payload }: any) {
+function ChartTooltip({ active, payload }: { active?: boolean; payload?: Array<{ payload: ImpactBreakdownItem }> }) {
   if (!active || !payload?.length) return null;
   const item = payload[0].payload as ImpactBreakdownItem;
   return (

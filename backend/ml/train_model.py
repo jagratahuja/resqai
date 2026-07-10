@@ -43,7 +43,7 @@ def train():
     # Model pipeline
     pipeline = Pipeline(steps=[
         ('preprocessor', preprocessor),
-        ('model', RandomForestRegressor(n_estimators=100, random_state=42))
+        ('model', RandomForestRegressor(n_estimators=100, max_depth=20, min_samples_split=100, n_jobs=-1, random_state=42))
     ])
 
     # Train/Test Split

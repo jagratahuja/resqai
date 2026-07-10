@@ -19,22 +19,24 @@ export default function SectionCard({
   className = "",
 }: SectionCardProps) {
   return (
-    <section className={`card p-5 animate-fade-in ${className}`}>
-      <div className="mb-4 flex items-center justify-between gap-3">
-        <div className="flex items-center gap-2.5">
+    <section className={`card flex flex-col ${className}`}>
+      <div className="flex items-start justify-between p-6 border-b border-white/5">
+        <div className="flex items-center gap-3">
           {Icon && (
-            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-ink-700/60 ring-1 ring-ink-600">
-              <Icon className="h-4 w-4 text-accent" />
+            <div className="p-2 rounded-lg bg-ink-800 border border-ink-700">
+              <Icon className="w-4 h-4 text-slate-300" />
             </div>
           )}
           <div>
-            <h3 className="text-sm font-semibold text-slate-100">{title}</h3>
-            {subtitle && <p className="text-xs text-slate-500">{subtitle}</p>}
+            <h3 className="text-base font-semibold text-white">{title}</h3>
+            {subtitle && <p className="text-sm text-slate-400 mt-0.5">{subtitle}</p>}
           </div>
         </div>
         {action}
       </div>
-      {children}
+      <div className="flex-1 p-6 overflow-hidden flex flex-col">
+        {children}
+      </div>
     </section>
   );
 }

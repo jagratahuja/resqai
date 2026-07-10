@@ -11,11 +11,11 @@ interface StatCardProps {
 }
 
 const ACCENT_MAP = {
-  accent: { text: "text-accent", bg: "bg-accent/10", ring: "ring-accent/20" },
-  red: { text: "text-signal-red", bg: "bg-signal-red/10", ring: "ring-signal-red/20" },
-  amber: { text: "text-signal-amber", bg: "bg-signal-amber/10", ring: "ring-signal-amber/20" },
-  blue: { text: "text-signal-blue", bg: "bg-signal-blue/10", ring: "ring-signal-blue/20" },
-  violet: { text: "text-signal-violet", bg: "bg-signal-violet/10", ring: "ring-signal-violet/20" },
+  accent: { text: "text-accent", bg: "bg-accent/10" },
+  red: { text: "text-signal-red", bg: "bg-signal-red/10" },
+  amber: { text: "text-signal-amber", bg: "bg-signal-amber/10" },
+  blue: { text: "text-signal-blue", bg: "bg-signal-blue/10" },
+  violet: { text: "text-signal-violet", bg: "bg-signal-violet/10" },
 };
 
 export default function StatCard({
@@ -28,18 +28,18 @@ export default function StatCard({
 }: StatCardProps) {
   const a = ACCENT_MAP[accent];
   return (
-    <div className="card card-hover p-4 animate-fade-in">
+    <div className="card p-5 card-hover">
       <div className="flex items-start justify-between">
-        <div className="min-w-0">
-          <p className="label-text">{label}</p>
-          <div className="flex items-baseline gap-1">
-            <span className="stat-value">{value}</span>
-            {unit && <span className="text-xs font-medium text-slate-500">{unit}</span>}
+        <div>
+          <h4 className="text-sm font-medium text-slate-400 mb-2">{label}</h4>
+          <div className="flex items-baseline gap-1.5">
+            <span className="text-3xl font-semibold tracking-tight text-white">{value}</span>
+            {unit && <span className="text-sm font-medium text-slate-500">{unit}</span>}
           </div>
-          {sublabel && <p className="mt-1 text-xs text-slate-500">{sublabel}</p>}
+          {sublabel && <p className="mt-2 text-xs text-slate-500 font-medium">{sublabel}</p>}
         </div>
-        <div className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-lg ${a.bg} ring-1 ${a.ring}`}>
-          <Icon className={`h-4.5 w-4.5 ${a.text}`} />
+        <div className={`p-2.5 rounded-lg ${a.bg}`}>
+          <Icon className={`w-5 h-5 ${a.text}`} />
         </div>
       </div>
     </div>

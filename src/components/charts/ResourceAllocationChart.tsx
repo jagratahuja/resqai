@@ -13,7 +13,7 @@ interface Props {
   data: ResourceAllocation[];
 }
 
-function ChartTooltip({ active, payload, label }: any) {
+function ChartTooltip({ active, payload, label }: { active?: boolean; payload?: Array<{ payload: ResourceAllocation }>; label?: string }) {
   if (!active || !payload?.length) return null;
   const item = payload[0].payload as ResourceAllocation;
   return (

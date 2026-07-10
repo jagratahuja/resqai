@@ -1,4 +1,7 @@
-from pulp import *
+import logging
+from pulp import LpProblem, LpMaximize, LpVariable, LpStatus, lpSum, value, PULP_CBC_CMD
+
+logger = logging.getLogger(__name__)
 
 def optimize_resources(incidents, total_resources):
     """
@@ -13,6 +16,16 @@ def optimize_resources(incidents, total_resources):
     Returns:
         dict: Optimization result containing status, objective_value, and allocations
     """
+    
+    if not incidents:
+        return {
+            'status': 'Optimal',
+            'objective_value': 0.0,
+            'total_requested_resources': 0,
+            'total_allocated_resources': 0,
+            'fulfillment_percentage': 100.0,
+            'allocations': {}
+        }
     
     # Initialize the problem
     prob = LpProblem("Resource_Allocation", LpMaximize)
@@ -46,7 +59,6 @@ def optimize_resources(incidents, total_resources):
     prob += lpSum([alloc_vars[inc['id']]['hospital_beds'] for inc in incidents]) <= total_resources.get('hospital_beds', 9999), "Total_Hospital_Beds"
     
     # Solve the problem
-    # Try using PULP_CBC_CMD to suppress output. If not, default is fine.
     prob.solve(PULP_CBC_CMD(msg=False))
     
     # Parse results and calculate fulfillment
@@ -59,10 +71,10 @@ def optimize_resources(incidents, total_resources):
         req_total = (inc.get('req_ambulances', 0) + inc.get('req_fire_engines', 0) + 
                      inc.get('req_rescue_teams', 0) + inc.get('req_hospital_beds', 0))
         
-        alloc_amb = int(value(alloc_vars[inc_id]['ambulances']))
-        alloc_fire = int(value(alloc_vars[inc_id]['fire_engines']))
-        alloc_res = int(value(alloc_vars[inc_id]['rescue_teams']))
-        alloc_beds = int(value(alloc_vars[inc_id]['hospital_beds']))
+        alloc_amb = int(value(alloc_vars[inc_id]['ambulances']) or 0)
+        alloc_fire = int(value(alloc_vars[inc_id]['fire_engines']) or 0)
+        alloc_res = int(value(alloc_vars[inc_id]['rescue_teams']) or 0)
+        alloc_beds = int(value(alloc_vars[inc_id]['hospital_beds']) or 0)
         
         alloc_total = alloc_amb + alloc_fire + alloc_res + alloc_beds
         
@@ -77,10 +89,12 @@ def optimize_resources(incidents, total_resources):
         }
         
     fulfillment_percentage = (total_allocated_resources / total_requested_resources * 100) if total_requested_resources > 0 else 100.0
+    
+    obj_value = value(prob.objective)
         
     return {
         'status': LpStatus[prob.status],
-        'objective_value': float(value(prob.objective)) if value(prob.objective) else 0.0,
+        'objective_value': float(obj_value) if obj_value is not None else 0.0,
         'total_requested_resources': total_requested_resources,
         'total_allocated_resources': total_allocated_resources,
         'fulfillment_percentage': round(fulfillment_percentage, 1),

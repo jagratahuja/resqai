@@ -18,22 +18,22 @@ const ICONS: Record<string, typeof AlertTriangle> = {
 
 const STATUS_STYLES = {
   completed: {
-    ring: "ring-accent/40 bg-accent/10",
-    icon: "text-accent",
-    line: "bg-accent/40",
-    label: "text-accent",
+    bg: "bg-emerald-500/10 border-emerald-500/20",
+    icon: "text-emerald-400",
+    line: "bg-emerald-500/20",
+    badge: "bg-emerald-500/10 text-emerald-400 border-emerald-500/20",
   },
   active: {
-    ring: "ring-signal-amber/50 bg-signal-amber/10",
-    icon: "text-signal-amber",
-    line: "bg-ink-700",
-    label: "text-signal-amber",
+    bg: "bg-accent/10 border-accent/20",
+    icon: "text-accent",
+    line: "bg-ink-800",
+    badge: "bg-accent/10 text-accent border-accent/20",
   },
   pending: {
-    ring: "ring-ink-600 bg-ink-800",
+    bg: "bg-ink-800 border-white/5",
     icon: "text-slate-500",
-    line: "bg-ink-700",
-    label: "text-slate-500",
+    line: "bg-ink-800",
+    badge: "bg-ink-800 text-slate-500 border-white/5",
   },
 };
 
@@ -43,7 +43,7 @@ interface Props {
 
 export default function Timeline({ events }: Props) {
   return (
-    <ol className="relative space-y-1">
+    <ol className="relative space-y-2">
       {events.map((evt, idx) => {
         const Icon = ICONS[evt.icon] ?? AlertTriangle;
         const s = STATUS_STYLES[evt.status];
@@ -52,36 +52,30 @@ export default function Timeline({ events }: Props) {
           <li key={evt.id} className="relative flex gap-4 pb-6 last:pb-0">
             {!isLast && (
               <span
-                className={`absolute left-[18px] top-10 h-[calc(100%-2.5rem)] w-0.5 ${s.line}`}
+                className={`absolute left-5 top-10 h-[calc(100%-2.5rem)] w-px ${s.line}`}
                 aria-hidden
               />
             )}
             <div
-              className={`relative z-10 flex h-9 w-9 shrink-0 items-center justify-center rounded-full ring-1 ${s.ring} ${
-                evt.status === "active" ? "animate-pulse" : ""
+              className={`relative z-10 flex h-10 w-10 shrink-0 items-center justify-center rounded-full border ${s.bg} ${
+                evt.status === "active" ? "ring-4 ring-accent/10" : ""
               }`}
             >
-              <Icon className={`h-4.5 w-4.5 ${s.icon}`} />
+              <Icon className={`h-4 w-4 ${s.icon}`} />
             </div>
-            <div className="flex-1 pt-1">
+            <div className="flex-1 pt-2">
               <div className="flex flex-wrap items-center justify-between gap-2">
-                <h4 className="text-sm font-semibold text-slate-100">{evt.title}</h4>
-                <span className={`flex items-center gap-1 font-mono text-[11px] ${s.label}`}>
+                <h4 className="text-sm font-semibold text-slate-200">{evt.title}</h4>
+                <span className="flex items-center gap-1.5 text-xs font-medium text-slate-500">
                   <Clock className="h-3 w-3" />
                   {evt.timestamp}
                 </span>
               </div>
-              <p className="mt-1 text-xs leading-relaxed text-slate-400">{evt.description}</p>
+              <p className="mt-1 text-sm text-slate-400 leading-relaxed">{evt.description}</p>
               <span
-                className={`mt-2 inline-block rounded px-1.5 py-0.5 text-[10px] font-medium uppercase tracking-wider ${
-                  evt.status === "completed"
-                    ? "bg-accent/10 text-accent"
-                    : evt.status === "active"
-                    ? "bg-signal-amber/10 text-signal-amber"
-                    : "bg-ink-700 text-slate-500"
-                }`}
+                className={`mt-3 inline-block px-2.5 py-1 text-[11px] font-medium rounded-full border ${s.badge}`}
               >
-                {evt.status} · {evt.duration}
+                <span className="capitalize">{evt.status}</span> · {evt.duration}
               </span>
             </div>
           </li>

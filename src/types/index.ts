@@ -72,7 +72,7 @@ export interface SimulationResult {
   recommendations: string[];
   incidentId: string;
   generatedAt: string;
-  optimizationResult?: any;
+  optimizationResult?: OptimizationResult;
 }
 
 export interface ModelMetrics {
@@ -102,7 +102,29 @@ export interface OptimizationResult {
   allocations: Record<string, OptimizationAllocation>;
 }
 
+export interface MultiIncidentEntry {
+  id: string;
+  incident_type: string;
+  location?: string;
+  impact: number;
+  estimated_injured: number;
+  occupancy: number;
+  weather?: string;
+  response_eta?: number;
+  severity_indicator?: number;
+  // Mapped properties used by IncidentComparisonGrid
+  incidentId?: string;
+  incidentType?: string;
+  impactScore?: number;
+  riskLevel?: RiskLevel;
+  estimatedInjured?: number;
+  req_ambulances?: number;
+  req_fire_engines?: number;
+  req_rescue_teams?: number;
+  req_hospital_beds?: number;
+}
+
 export interface MultiIncidentResult {
-  incidents: any[];
+  incidents: MultiIncidentEntry[];
   optimization: OptimizationResult;
 }
